@@ -1,0 +1,81 @@
+[2025-07-21T01:55:38.446+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-21T01:55:38.463+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.ingest_raw_data scheduled__2025-07-20T00:00:00+00:00 [queued]>
+[2025-07-21T01:55:38.470+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.ingest_raw_data scheduled__2025-07-20T00:00:00+00:00 [queued]>
+[2025-07-21T01:55:38.471+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-07-21T01:55:38.484+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): ingest_raw_data> on 2025-07-20 00:00:00+00:00
+[2025-07-21T01:55:38.504+0000] {standard_task_runner.py:64} INFO - Started process 511 to run task
+[2025-07-21T01:55:38.513+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'ingest_raw_data', 'scheduled__2025-07-20T00:00:00+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp6lj_6l3m']
+[2025-07-21T01:55:38.517+0000] {standard_task_runner.py:91} INFO - Job 109: Subtask ingest_raw_data
+[2025-07-21T01:55:38.581+0000] {task_command.py:426} INFO - Running <TaskInstance: ETL_Pipeline.ingest_raw_data scheduled__2025-07-20T00:00:00+00:00 [running]> on host 5e47018a4c67
+[2025-07-21T01:55:38.670+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='ingest_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-20T00:00:00+00:00'
+[2025-07-21T01:55:38.673+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-21T01:55:59.987+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-21T01:55:59.989+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 492, in _make_request
+    raise new_e
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+    self._validate_conn(conn)
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1097, in _validate_conn
+    conn.connect()
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/connection.py", line 611, in connect
+    self.sock = sock = self._new_conn()
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/connection.py", line 218, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f04aeb69c30>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 845, in urlopen
+    retries = retries.increment(
+  File "/home/airflow/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.gutenberg.org', port=443): Max retries exceeded with url: /files/1952/1952-0.txt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f04aeb69c30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/code/scraper/ingest_data_raw.py", line 27, in main
+    response: requests.Response = requests.get(GUTENBERG_URL)
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.gutenberg.org', port=443): Max retries exceeded with url: /files/1952/1952-0.txt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f04aeb69c30>: Failed to establish a new connection: [Errno 111] Connection refused'))
+[2025-07-21T01:56:00.026+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_Pipeline, task_id=ingest_raw_data, run_id=scheduled__2025-07-20T00:00:00+00:00, execution_date=20250720T000000, start_date=20250721T015538, end_date=20250721T015600
+[2025-07-21T01:56:00.042+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 109 for task ingest_raw_data (HTTPSConnectionPool(host='www.gutenberg.org', port=443): Max retries exceeded with url: /files/1952/1952-0.txt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f04aeb69c30>: Failed to establish a new connection: [Errno 111] Connection refused')); 511)
+[2025-07-21T01:56:00.071+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-07-21T01:56:00.098+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-21T01:56:00.103+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

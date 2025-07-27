@@ -1,0 +1,32 @@
+[2025-07-20T13:27:43.064+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.bronze_transform manual__2025-07-20T13:27:30.629433+00:00 [queued]>
+[2025-07-20T13:27:43.071+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.bronze_transform manual__2025-07-20T13:27:30.629433+00:00 [queued]>
+[2025-07-20T13:27:43.072+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-07-20T13:27:43.082+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): bronze_transform> on 2025-07-20 13:27:30.629433+00:00
+[2025-07-20T13:27:43.093+0000] {standard_task_runner.py:60} INFO - Started process 399 to run task
+[2025-07-20T13:27:43.098+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'bronze_transform', 'manual__2025-07-20T13:27:30.629433+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpi7ekrblp']
+[2025-07-20T13:27:43.101+0000] {standard_task_runner.py:88} INFO - Job 51: Subtask bronze_transform
+[2025-07-20T13:27:43.146+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_Pipeline.bronze_transform manual__2025-07-20T13:27:30.629433+00:00 [running]> on host b427e0db8255
+[2025-07-20T13:27:43.211+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='bronze_transform' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T13:27:30.629433+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T13:27:30.629433+00:00'
+[2025-07-20T13:27:43.222+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/code/etl/bronze.py", line 24, in main
+    delete_bucket(RAW_BUCKET)
+  File "/opt/airflow/utils/minio_helper.py", line 23, in delete_bucket
+    minio_client.remove_bucket(bucket_name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/minio/api.py", line 714, in remove_bucket
+    self._execute("DELETE", bucket_name)
+  File "/home/airflow/.local/lib/python3.9/site-packages/minio/api.py", line 441, in _execute
+    return self._url_open(
+  File "/home/airflow/.local/lib/python3.9/site-packages/minio/api.py", line 424, in _url_open
+    raise response_error
+minio.error.S3Error: S3 operation failed; code: BucketNotEmpty, message: The bucket you tried to delete is not empty, resource: /raw, request_id: 1853F8A3FEFB3700, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: raw
+[2025-07-20T13:27:43.244+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_Pipeline, task_id=bronze_transform, execution_date=20250720T132730, start_date=20250720T132743, end_date=20250720T132743
+[2025-07-20T13:27:43.255+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 51 for task bronze_transform (S3 operation failed; code: BucketNotEmpty, message: The bucket you tried to delete is not empty, resource: /raw, request_id: 1853F8A3FEFB3700, host_id: dd9025bab4ad464b049177c95eb6ebf374d3b3fd1af9251148b658df7ac2e3e8, bucket_name: raw; 399)
+[2025-07-20T13:27:43.309+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-07-20T13:27:43.328+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,14 @@
+[2025-07-20T15:05:59.225+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.bronze_transform manual__2025-07-20T15:05:48.097430+00:00 [queued]>
+[2025-07-20T15:05:59.231+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.bronze_transform manual__2025-07-20T15:05:48.097430+00:00 [queued]>
+[2025-07-20T15:05:59.232+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-07-20T15:05:59.241+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): bronze_transform> on 2025-07-20 15:05:48.097430+00:00
+[2025-07-20T15:05:59.249+0000] {standard_task_runner.py:60} INFO - Started process 2356 to run task
+[2025-07-20T15:05:59.253+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'bronze_transform', 'manual__2025-07-20T15:05:48.097430+00:00', '--job-id', '85', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpb8vzcrmp']
+[2025-07-20T15:05:59.256+0000] {standard_task_runner.py:88} INFO - Job 85: Subtask bronze_transform
+[2025-07-20T15:05:59.294+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_Pipeline.bronze_transform manual__2025-07-20T15:05:48.097430+00:00 [running]> on host a92f50175a5f
+[2025-07-20T15:05:59.352+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='bronze_transform' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T15:05:48.097430+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T15:05:48.097430+00:00'
+[2025-07-20T15:05:59.406+0000] {logging_mixin.py:188} INFO - Uploaded DataFrame as parquet data.parquet to MinIO bucket bronze
+[2025-07-20T15:05:59.407+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-07-20T15:05:59.414+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_Pipeline, task_id=bronze_transform, execution_date=20250720T150548, start_date=20250720T150559, end_date=20250720T150559
+[2025-07-20T15:05:59.464+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-07-20T15:05:59.483+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

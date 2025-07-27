@@ -1,0 +1,20 @@
+[2025-07-20T17:43:16.819+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-20T17:43:16.828+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.ingest_raw_data manual__2025-07-20T17:43:12.408682+00:00 [queued]>
+[2025-07-20T17:43:16.833+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.ingest_raw_data manual__2025-07-20T17:43:12.408682+00:00 [queued]>
+[2025-07-20T17:43:16.834+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-07-20T17:43:16.841+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): ingest_raw_data> on 2025-07-20 17:43:12.408682+00:00
+[2025-07-20T17:43:16.852+0000] {standard_task_runner.py:64} INFO - Started process 449 to run task
+[2025-07-20T17:43:16.857+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'ingest_raw_data', 'manual__2025-07-20T17:43:12.408682+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp5ms_lvc7']
+[2025-07-20T17:43:16.860+0000] {standard_task_runner.py:91} INFO - Job 90: Subtask ingest_raw_data
+[2025-07-20T17:43:16.899+0000] {task_command.py:426} INFO - Running <TaskInstance: ETL_Pipeline.ingest_raw_data manual__2025-07-20T17:43:12.408682+00:00 [running]> on host 59de35979445
+[2025-07-20T17:43:16.951+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='ingest_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T17:43:12.408682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T17:43:12.408682+00:00'
+[2025-07-20T17:43:16.953+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-20T17:43:18.605+0000] {logging_mixin.py:188} INFO - Saved raw text to data/raw/data
+[2025-07-20T17:43:18.614+0000] {logging_mixin.py:188} INFO - Created DataFrame with 574 lines of text
+[2025-07-20T17:43:18.651+0000] {logging_mixin.py:188} INFO - Uploaded DataFrame as parquet /data.parquet to MinIO bucket raw
+[2025-07-20T17:43:18.653+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-07-20T17:43:18.654+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-20T17:43:18.661+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_Pipeline, task_id=ingest_raw_data, run_id=manual__2025-07-20T17:43:12.408682+00:00, execution_date=20250720T174312, start_date=20250720T174316, end_date=20250720T174318
+[2025-07-20T17:43:18.682+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-07-20T17:43:18.709+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-07-20T17:43:18.711+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

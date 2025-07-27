@@ -1,0 +1,2 @@
+[2025-07-20T15:56:20.904+0000] {taskinstance.py:1946} INFO - Dependencies not met for <TaskInstance: ETL_Pipeline.bronze_transform manual__2025-07-20T15:56:35.930090+00:00 [queued]>, dependency 'Execution Date' FAILED: Execution date 2025-07-20T15:56:35.930090+00:00 is in the future (the current date is 2025-07-20T15:56:20.904243+00:00).
+[2025-07-20T15:56:20.906+0000] {local_task_job_runner.py:160} INFO - Task is not able to be run

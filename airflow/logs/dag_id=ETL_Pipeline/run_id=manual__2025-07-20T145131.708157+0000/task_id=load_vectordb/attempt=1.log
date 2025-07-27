@@ -1,0 +1,34 @@
+[2025-07-20T14:51:37.023+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T14:51:31.708157+00:00 [queued]>
+[2025-07-20T14:51:37.028+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T14:51:31.708157+00:00 [queued]>
+[2025-07-20T14:51:37.029+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-07-20T14:51:37.037+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_vectordb> on 2025-07-20 14:51:31.708157+00:00
+[2025-07-20T14:51:37.052+0000] {standard_task_runner.py:60} INFO - Started process 1016 to run task
+[2025-07-20T14:51:37.056+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'load_vectordb', 'manual__2025-07-20T14:51:31.708157+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmplrrsvo2j']
+[2025-07-20T14:51:37.061+0000] {standard_task_runner.py:88} INFO - Job 64: Subtask load_vectordb
+[2025-07-20T14:51:37.092+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T14:51:31.708157+00:00 [running]> on host a92f50175a5f
+[2025-07-20T14:51:37.144+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='load_vectordb' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T14:51:31.708157+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T14:51:31.708157+00:00'
+[2025-07-20T14:51:37.589+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/code/vectordb/chromadb.py", line 27, in main
+    collection.delete(where={})
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/models/Collection.py", line 404, in delete
+    delete_request = self._validate_and_prepare_delete_request(
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/models/CollectionCommon.py", line 95, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/models/CollectionCommon.py", line 456, in _validate_and_prepare_delete_request
+    validate_filter_set(filter_set=filters)
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/types.py", line 418, in validate_filter_set
+    validate_where(filter_set["where"])
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/types.py", line 803, in validate_where
+    raise ValueError(f"Expected where to have exactly one operator, got {where}")
+ValueError: Expected where to have exactly one operator, got {} in delete.
+[2025-07-20T14:51:37.607+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_Pipeline, task_id=load_vectordb, execution_date=20250720T145131, start_date=20250720T145137, end_date=20250720T145137
+[2025-07-20T14:51:37.618+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 64 for task load_vectordb (Expected where to have exactly one operator, got {} in delete.; 1016)
+[2025-07-20T14:51:37.668+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-07-20T14:51:37.681+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

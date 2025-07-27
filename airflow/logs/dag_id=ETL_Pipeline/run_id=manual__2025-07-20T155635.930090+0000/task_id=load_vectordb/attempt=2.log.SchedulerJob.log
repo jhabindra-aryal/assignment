@@ -1,0 +1,1 @@
+[2025-07-20T16:03:17.335+0000] {scheduler_job_runner.py:781} ERROR - Executor reports task instance <TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T15:56:35.930090+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

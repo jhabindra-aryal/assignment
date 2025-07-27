@@ -1,0 +1,42 @@
+[2025-07-20T15:00:34.211+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T15:00:00.218082+00:00 [queued]>
+[2025-07-20T15:00:34.216+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T15:00:00.218082+00:00 [queued]>
+[2025-07-20T15:00:34.217+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-07-20T15:00:34.225+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): load_vectordb> on 2025-07-20 15:00:00.218082+00:00
+[2025-07-20T15:00:34.234+0000] {standard_task_runner.py:60} INFO - Started process 1893 to run task
+[2025-07-20T15:00:34.239+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'load_vectordb', 'manual__2025-07-20T15:00:00.218082+00:00', '--job-id', '77', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpr09q2ybt']
+[2025-07-20T15:00:34.242+0000] {standard_task_runner.py:88} INFO - Job 77: Subtask load_vectordb
+[2025-07-20T15:00:34.280+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T15:00:00.218082+00:00 [running]> on host a92f50175a5f
+[2025-07-20T15:00:34.327+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='load_vectordb' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T15:00:00.218082+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T15:00:00.218082+00:00'
+[2025-07-20T15:00:34.329+0000] {logging_mixin.py:188} INFO - Reading embedding data from MinIO...
+[2025-07-20T15:00:34.375+0000] {logging_mixin.py:188} INFO - Connecting to ChromaDB at localhost:8000...
+[2025-07-20T15:00:34.411+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/code/vectordb/chromadb.py", line 30, in main
+    client = chromadb.HttpClient(Settings(
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/__init__.py", line 244, in HttpClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/client.py", line 65, in __init__
+    super().__init__(settings=settings)
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/shared_system_client.py", line 19, in __init__
+    SharedSystemClient._create_system_if_not_exists(self._identifier, settings)
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/shared_system_client.py", line 30, in _create_system_if_not_exists
+    new_system.instance(ServerAPI)
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/config.py", line 450, in instance
+    impl = type(self)
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/fastapi.py", line 66, in __init__
+    self._api_url = FastAPI.resolve_url(
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/base_http_client.py", line 42, in resolve_url
+    BaseHTTPClient._validate_host(_chroma_server_host)
+  File "/home/airflow/.local/lib/python3.9/site-packages/chromadb/api/base_http_client.py", line 22, in _validate_host
+    raise ValueError(
+ValueError: Invalid URL. Unrecognized protocol - .
+[2025-07-20T15:00:34.430+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=ETL_Pipeline, task_id=load_vectordb, execution_date=20250720T150000, start_date=20250720T150034, end_date=20250720T150034
+[2025-07-20T15:00:34.437+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 77 for task load_vectordb (Invalid URL. Unrecognized protocol - .; 1893)
+[2025-07-20T15:00:34.450+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2025-07-20T15:00:34.461+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

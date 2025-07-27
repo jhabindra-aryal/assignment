@@ -1,0 +1,50 @@
+[2025-07-20T17:41:46.360+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-07-20T17:41:46.374+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T17:36:11.046513+00:00 [queued]>
+[2025-07-20T17:41:46.379+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T17:36:11.046513+00:00 [queued]>
+[2025-07-20T17:41:46.379+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-07-20T17:41:46.388+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_vectordb> on 2025-07-20 17:36:11.046513+00:00
+[2025-07-20T17:41:46.397+0000] {standard_task_runner.py:64} INFO - Started process 345 to run task
+[2025-07-20T17:41:46.401+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'load_vectordb', 'manual__2025-07-20T17:36:11.046513+00:00', '--job-id', '89', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmp3zkng909']
+[2025-07-20T17:41:46.404+0000] {standard_task_runner.py:91} INFO - Job 89: Subtask load_vectordb
+[2025-07-20T17:41:46.442+0000] {task_command.py:426} INFO - Running <TaskInstance: ETL_Pipeline.load_vectordb manual__2025-07-20T17:36:11.046513+00:00 [running]> on host 59de35979445
+[2025-07-20T17:41:46.493+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='load_vectordb' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T17:36:11.046513+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T17:36:11.046513+00:00'
+[2025-07-20T17:41:46.494+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-07-20T17:41:46.516+0000] {logging_mixin.py:188} INFO - Reading embedding data from MinIO...
+[2025-07-20T17:41:46.635+0000] {logging_mixin.py:188} INFO - Connecting to ChromaDB at chroma:8000...
+[2025-07-20T17:41:46.676+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-07-20T17:41:46.677+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/code/vectordb/vector_db.py", line 30, in main
+    client = chromadb.HttpClient(Settings(
+  File "/home/airflow/.local/lib/python3.10/site-packages/chromadb/__init__.py", line 244, in HttpClient
+    return ClientCreator(tenant=tenant, database=database, settings=settings)
+  File "/home/airflow/.local/lib/python3.10/site-packages/chromadb/api/client.py", line 65, in __init__
+    super().__init__(settings=settings)
+  File "/home/airflow/.local/lib/python3.10/site-packages/chromadb/api/shared_system_client.py", line 19, in __init__
+    SharedSystemClient._create_system_if_not_exists(self._identifier, settings)
+  File "/home/airflow/.local/lib/python3.10/site-packages/chromadb/api/shared_system_client.py", line 30, in _create_system_if_not_exists
+    new_system.instance(ServerAPI)
+  File "/home/airflow/.local/lib/python3.10/site-packages/chromadb/config.py", line 450, in instance
+    impl = type(self)
+  File "/home/airflow/.local/lib/python3.10/site-packages/chromadb/api/fastapi.py", line 66, in __init__
+    self._api_url = FastAPI.resolve_url(
+  File "/home/airflow/.local/lib/python3.10/site-packages/chromadb/api/base_http_client.py", line 42, in resolve_url
+    BaseHTTPClient._validate_host(_chroma_server_host)
+  File "/home/airflow/.local/lib/python3.10/site-packages/chromadb/api/base_http_client.py", line 22, in _validate_host
+    raise ValueError(
+ValueError: Invalid URL. Unrecognized protocol - .
+[2025-07-20T17:41:46.704+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=ETL_Pipeline, task_id=load_vectordb, run_id=manual__2025-07-20T17:36:11.046513+00:00, execution_date=20250720T173611, start_date=20250720T174146, end_date=20250720T174146
+[2025-07-20T17:41:46.713+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 89 for task load_vectordb (Invalid URL. Unrecognized protocol - .; 345)
+[2025-07-20T17:41:46.733+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-07-20T17:41:46.747+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-07-20T17:41:46.748+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,24 @@
+[2025-07-20T13:32:58.485+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.gold_transform manual__2025-07-20T13:27:30.629433+00:00 [queued]>
+[2025-07-20T13:32:58.491+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.gold_transform manual__2025-07-20T13:27:30.629433+00:00 [queued]>
+[2025-07-20T13:32:58.492+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-07-20T13:32:58.500+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): gold_transform> on 2025-07-20 13:27:30.629433+00:00
+[2025-07-20T13:32:58.510+0000] {standard_task_runner.py:60} INFO - Started process 640 to run task
+[2025-07-20T13:32:58.515+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'gold_transform', 'manual__2025-07-20T13:27:30.629433+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpk5_z2saa']
+[2025-07-20T13:32:58.518+0000] {standard_task_runner.py:88} INFO - Job 59: Subtask gold_transform
+[2025-07-20T13:32:58.561+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_Pipeline.gold_transform manual__2025-07-20T13:27:30.629433+00:00 [running]> on host b427e0db8255
+[2025-07-20T13:32:58.619+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='gold_transform' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T13:27:30.629433+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T13:27:30.629433+00:00'
+[2025-07-20T13:32:58.668+0000] {logging_mixin.py:188} INFO - Loading embedding model...
+[2025-07-20T13:32:58.689+0000] {SentenceTransformer.py:219} INFO - Use pytorch device_name: cpu
+[2025-07-20T13:32:58.690+0000] {SentenceTransformer.py:227} INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2025-07-20T13:33:03.307+0000] {logging_mixin.py:188} INFO - Generating embeddings...
+[2025-07-20T13:33:03.313+0000] {logging_mixin.py:188} WARNING - Batches:   0%|          | 0/1 [00:00<?, ?it/s]
+[2025-07-20T13:33:03.389+0000] {logging_mixin.py:188} WARNING - Batches: 100%|##########| 1/1 [00:00<00:00, 13.21it/s]
+[2025-07-20T13:33:03.400+0000] {logging_mixin.py:188} INFO -                                            paragraph  ...                                          embedding
+0  The Yellow Wallpaper By Charlotte Perkins Gilm...  ...  [-0.037135396152734756, 0.07840736955404282, 0...
+
+[1 rows x 8 columns]
+[2025-07-20T13:33:03.412+0000] {logging_mixin.py:188} INFO - Uploaded DataFrame as parquet data.parquet to MinIO bucket gold
+[2025-07-20T13:33:03.413+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-07-20T13:33:03.422+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_Pipeline, task_id=gold_transform, execution_date=20250720T132730, start_date=20250720T133258, end_date=20250720T133303
+[2025-07-20T13:33:03.452+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-07-20T13:33:03.464+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

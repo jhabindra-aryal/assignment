@@ -1,0 +1,589 @@
+[2025-07-20T15:19:50.055+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_Pipeline.silver_transform manual__2025-07-20T15:19:29.992402+00:00 [queued]>
+[2025-07-20T15:19:50.062+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_Pipeline.silver_transform manual__2025-07-20T15:19:29.992402+00:00 [queued]>
+[2025-07-20T15:19:50.063+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2025-07-20T15:19:50.073+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): silver_transform> on 2025-07-20 15:19:29.992402+00:00
+[2025-07-20T15:19:50.085+0000] {standard_task_runner.py:60} INFO - Started process 512 to run task
+[2025-07-20T15:19:50.090+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'ETL_Pipeline', 'silver_transform', 'manual__2025-07-20T15:19:29.992402+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpk5lxickk']
+[2025-07-20T15:19:50.093+0000] {standard_task_runner.py:88} INFO - Job 95: Subtask silver_transform
+[2025-07-20T15:19:50.141+0000] {task_command.py:423} INFO - Running <TaskInstance: ETL_Pipeline.silver_transform manual__2025-07-20T15:19:29.992402+00:00 [running]> on host bd88ebf9f954
+[2025-07-20T15:19:50.200+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jhabindra Aryal' AIRFLOW_CTX_DAG_ID='ETL_Pipeline' AIRFLOW_CTX_TASK_ID='silver_transform' AIRFLOW_CTX_EXECUTION_DATE='2025-07-20T15:19:29.992402+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-07-20T15:19:29.992402+00:00'
+[2025-07-20T15:19:50.248+0000] {logging_mixin.py:188} INFO - *** START OF THE PROJECT GUTENBERG EBOOK 1952 ***
+[2025-07-20T15:19:50.249+0000] {logging_mixin.py:188} INFO - The Yellow Wallpaper
+[2025-07-20T15:19:50.250+0000] {logging_mixin.py:188} INFO - By Charlotte Perkins Gilman
+[2025-07-20T15:19:50.250+0000] {logging_mixin.py:188} INFO - It is very seldom that mere ordinary people like John and myself secure
+[2025-07-20T15:19:50.251+0000] {logging_mixin.py:188} INFO - ancestral halls for the summer.
+[2025-07-20T15:19:50.251+0000] {logging_mixin.py:188} INFO - A colonial mansion, a hereditary estate, I would say a haunted house,
+[2025-07-20T15:19:50.252+0000] {logging_mixin.py:188} INFO - and reach the height of romantic felicity—but that would be asking too
+[2025-07-20T15:19:50.252+0000] {logging_mixin.py:188} INFO - much of fate!
+[2025-07-20T15:19:50.253+0000] {logging_mixin.py:188} INFO - Still I will proudly declare that there is something queer about it.
+[2025-07-20T15:19:50.253+0000] {logging_mixin.py:188} INFO - Else, why should it be let so cheaply? And why have stood so long
+[2025-07-20T15:19:50.254+0000] {logging_mixin.py:188} INFO - untenanted?
+[2025-07-20T15:19:50.254+0000] {logging_mixin.py:188} INFO - John laughs at me, of course, but one expects that in marriage.
+[2025-07-20T15:19:50.254+0000] {logging_mixin.py:188} INFO - John is practical in the extreme. He has no patience with faith, an
+[2025-07-20T15:19:50.255+0000] {logging_mixin.py:188} INFO - intense horror of superstition, and he scoffs openly at any talk of
+[2025-07-20T15:19:50.255+0000] {logging_mixin.py:188} INFO - things not to be felt and seen and put down in figures.
+[2025-07-20T15:19:50.255+0000] {logging_mixin.py:188} INFO - John is a physician, and perhaps—(I would not say it to a living soul,
+[2025-07-20T15:19:50.256+0000] {logging_mixin.py:188} INFO - of course, but this is dead paper and a great relief to my
+[2025-07-20T15:19:50.256+0000] {logging_mixin.py:188} INFO - mind)—perhaps that is one reason I do not get well faster.
+[2025-07-20T15:19:50.256+0000] {logging_mixin.py:188} INFO - You see, he does not believe I am sick!
+[2025-07-20T15:19:50.257+0000] {logging_mixin.py:188} INFO - And what can one do?
+[2025-07-20T15:19:50.257+0000] {logging_mixin.py:188} INFO - If a physician of high standing, and one’s own husband, assures friends
+[2025-07-20T15:19:50.257+0000] {logging_mixin.py:188} INFO - and relatives that there is really nothing the matter with one but
+[2025-07-20T15:19:50.258+0000] {logging_mixin.py:188} INFO - temporary nervous depression—a slight hysterical tendency—what is one
+[2025-07-20T15:19:50.259+0000] {logging_mixin.py:188} INFO - to do?
+[2025-07-20T15:19:50.259+0000] {logging_mixin.py:188} INFO - My brother is also a physician, and also of high standing, and he says
+[2025-07-20T15:19:50.259+0000] {logging_mixin.py:188} INFO - the same thing.
+[2025-07-20T15:19:50.260+0000] {logging_mixin.py:188} INFO - So I take phosphates or phosphites—whichever it is, and tonics, and
+[2025-07-20T15:19:50.260+0000] {logging_mixin.py:188} INFO - journeys, and air, and exercise, and am absolutely forbidden to “work”
+[2025-07-20T15:19:50.260+0000] {logging_mixin.py:188} INFO - until I am well again.
+[2025-07-20T15:19:50.261+0000] {logging_mixin.py:188} INFO - Personally, I disagree with their ideas.
+[2025-07-20T15:19:50.261+0000] {logging_mixin.py:188} INFO - Personally, I believe that congenial work, with excitement and change,
+[2025-07-20T15:19:50.261+0000] {logging_mixin.py:188} INFO - would do me good.
+[2025-07-20T15:19:50.262+0000] {logging_mixin.py:188} INFO - But what is one to do?
+[2025-07-20T15:19:50.262+0000] {logging_mixin.py:188} INFO - I did write for a while in spite of them; but it does exhaust me a good
+[2025-07-20T15:19:50.262+0000] {logging_mixin.py:188} INFO - deal—having to be so sly about it, or else meet with heavy opposition.
+[2025-07-20T15:19:50.263+0000] {logging_mixin.py:188} INFO - I sometimes fancy that in my condition if I had less opposition and
+[2025-07-20T15:19:50.263+0000] {logging_mixin.py:188} INFO - more society and stimulus—but John says the very worst thing I can do
+[2025-07-20T15:19:50.264+0000] {logging_mixin.py:188} INFO - is to think about my condition, and I confess it always makes me feel
+[2025-07-20T15:19:50.264+0000] {logging_mixin.py:188} INFO - bad.
+[2025-07-20T15:19:50.264+0000] {logging_mixin.py:188} INFO - So I will let it alone and talk about the house.
+[2025-07-20T15:19:50.264+0000] {logging_mixin.py:188} INFO - The most beautiful place! It is quite alone, standing well back from
+[2025-07-20T15:19:50.265+0000] {logging_mixin.py:188} INFO - the road, quite three miles from the village. It makes me think of
+[2025-07-20T15:19:50.265+0000] {logging_mixin.py:188} INFO - English places that you read about, for there are hedges and walls and
+[2025-07-20T15:19:50.265+0000] {logging_mixin.py:188} INFO - gates that lock, and lots of separate little houses for the gardeners
+[2025-07-20T15:19:50.266+0000] {logging_mixin.py:188} INFO - and people.
+[2025-07-20T15:19:50.266+0000] {logging_mixin.py:188} INFO - There is a delicious garden! I never saw such a garden—large and shady,
+[2025-07-20T15:19:50.266+0000] {logging_mixin.py:188} INFO - full of box-bordered paths, and lined with long grape-covered arbors
+[2025-07-20T15:19:50.267+0000] {logging_mixin.py:188} INFO - with seats under them.
+[2025-07-20T15:19:50.267+0000] {logging_mixin.py:188} INFO - There were greenhouses, too, but they are all broken now.
+[2025-07-20T15:19:50.267+0000] {logging_mixin.py:188} INFO - There was some legal trouble, I believe, something about the heirs and
+[2025-07-20T15:19:50.268+0000] {logging_mixin.py:188} INFO - co-heirs; anyhow, the place has been empty for years.
+[2025-07-20T15:19:50.268+0000] {logging_mixin.py:188} INFO - That spoils my ghostliness, I am afraid; but I don’t care—there is
+[2025-07-20T15:19:50.268+0000] {logging_mixin.py:188} INFO - something strange about the house—I can feel it.
+[2025-07-20T15:19:50.269+0000] {logging_mixin.py:188} INFO - I even said so to John one moonlight evening, but he said what I felt
+[2025-07-20T15:19:50.269+0000] {logging_mixin.py:188} INFO - was a draught, and shut the window.
+[2025-07-20T15:19:50.269+0000] {logging_mixin.py:188} INFO - I get unreasonably angry with John sometimes. I’m sure I never used to
+[2025-07-20T15:19:50.270+0000] {logging_mixin.py:188} INFO - be so sensitive. I think it is due to this nervous condition.
+[2025-07-20T15:19:50.270+0000] {logging_mixin.py:188} INFO - But John says if I feel so I shall neglect proper self-control; so I
+[2025-07-20T15:19:50.270+0000] {logging_mixin.py:188} INFO - take pains to control myself,—before him, at least,—and that makes me
+[2025-07-20T15:19:50.271+0000] {logging_mixin.py:188} INFO - very tired.
+[2025-07-20T15:19:50.271+0000] {logging_mixin.py:188} INFO - I don’t like our room a bit. I wanted one downstairs that opened on the
+[2025-07-20T15:19:50.271+0000] {logging_mixin.py:188} INFO - piazza and had roses all over the window, and such pretty old-fashioned
+[2025-07-20T15:19:50.272+0000] {logging_mixin.py:188} INFO - chintz hangings! but John would not hear of it.
+[2025-07-20T15:19:50.272+0000] {logging_mixin.py:188} INFO - He said there was only one window and not room for two beds, and no
+[2025-07-20T15:19:50.273+0000] {logging_mixin.py:188} INFO - near room for him if he took another.
+[2025-07-20T15:19:50.273+0000] {logging_mixin.py:188} INFO - He is very careful and loving, and hardly lets me stir without special
+[2025-07-20T15:19:50.273+0000] {logging_mixin.py:188} INFO - direction.
+[2025-07-20T15:19:50.274+0000] {logging_mixin.py:188} INFO - I have a schedule prescription for each hour in the day; he takes all
+[2025-07-20T15:19:50.274+0000] {logging_mixin.py:188} INFO - care from me, and so I feel basely ungrateful not to value it more.
+[2025-07-20T15:19:50.275+0000] {logging_mixin.py:188} INFO - He said we came here solely on my account, that I was to have perfect
+[2025-07-20T15:19:50.275+0000] {logging_mixin.py:188} INFO - rest and all the air I could get. “Your exercise depends on your
+[2025-07-20T15:19:50.275+0000] {logging_mixin.py:188} INFO - strength, my dear,” said he, “and your food somewhat on your appetite;
+[2025-07-20T15:19:50.276+0000] {logging_mixin.py:188} INFO - but air you can absorb all the time.” So we took the nursery, at the
+[2025-07-20T15:19:50.276+0000] {logging_mixin.py:188} INFO - top of the house.
+[2025-07-20T15:19:50.276+0000] {logging_mixin.py:188} INFO - It is a big, airy room, the whole floor nearly, with windows that look
+[2025-07-20T15:19:50.277+0000] {logging_mixin.py:188} INFO - all ways, and air and sunshine galore. It was nursery first and then
+[2025-07-20T15:19:50.277+0000] {logging_mixin.py:188} INFO - playground and gymnasium, I should judge; for the windows are barred
+[2025-07-20T15:19:50.278+0000] {logging_mixin.py:188} INFO - for little children, and there are rings and things in the walls.
+[2025-07-20T15:19:50.278+0000] {logging_mixin.py:188} INFO - The paint and paper look as if a boys’ school had used it. It is
+[2025-07-20T15:19:50.278+0000] {logging_mixin.py:188} INFO - stripped off—the paper—in great patches all around the head of my bed,
+[2025-07-20T15:19:50.279+0000] {logging_mixin.py:188} INFO - about as far as I can reach, and in a great place on the other side of
+[2025-07-20T15:19:50.279+0000] {logging_mixin.py:188} INFO - the room low down. I never saw a worse paper in my life.
+[2025-07-20T15:19:50.280+0000] {logging_mixin.py:188} INFO - One of those sprawling flamboyant patterns committing every artistic
+[2025-07-20T15:19:50.280+0000] {logging_mixin.py:188} INFO - sin.
+[2025-07-20T15:19:50.280+0000] {logging_mixin.py:188} INFO - It is dull enough to confuse the eye in following, pronounced enough to
+[2025-07-20T15:19:50.280+0000] {logging_mixin.py:188} INFO - constantly irritate, and provoke study, and when you follow the lame,
+[2025-07-20T15:19:50.281+0000] {logging_mixin.py:188} INFO - uncertain curves for a little distance they suddenly commit
+[2025-07-20T15:19:50.281+0000] {logging_mixin.py:188} INFO - suicide—plunge off at outrageous angles, destroy themselves in
+[2025-07-20T15:19:50.281+0000] {logging_mixin.py:188} INFO - unheard-of contradictions.
+[2025-07-20T15:19:50.282+0000] {logging_mixin.py:188} INFO - The color is repellant, almost revolting; a smouldering, unclean
+[2025-07-20T15:19:50.282+0000] {logging_mixin.py:188} INFO - yellow, strangely faded by the slow-turning sunlight.
+[2025-07-20T15:19:50.283+0000] {logging_mixin.py:188} INFO - It is a dull yet lurid orange in some places, a sickly sulphur tint in
+[2025-07-20T15:19:50.283+0000] {logging_mixin.py:188} INFO - others.
+[2025-07-20T15:19:50.283+0000] {logging_mixin.py:188} INFO - No wonder the children hated it! I should hate it myself if I had to
+[2025-07-20T15:19:50.284+0000] {logging_mixin.py:188} INFO - live in this room long.
+[2025-07-20T15:19:50.284+0000] {logging_mixin.py:188} INFO - There comes John, and I must put this away,—he hates to have me write a
+[2025-07-20T15:19:50.284+0000] {logging_mixin.py:188} INFO - word.
+[2025-07-20T15:19:50.285+0000] {logging_mixin.py:188} INFO - We have been here two weeks, and I haven’t felt like writing before,
+[2025-07-20T15:19:50.285+0000] {logging_mixin.py:188} INFO - since that first day.
+[2025-07-20T15:19:50.286+0000] {logging_mixin.py:188} INFO - I am sitting by the window now, up in this atrocious nursery, and there
+[2025-07-20T15:19:50.286+0000] {logging_mixin.py:188} INFO - is nothing to hinder my writing as much as I please, save lack of
+[2025-07-20T15:19:50.286+0000] {logging_mixin.py:188} INFO - strength.
+[2025-07-20T15:19:50.287+0000] {logging_mixin.py:188} INFO - John is away all day, and even some nights when his cases are serious.
+[2025-07-20T15:19:50.287+0000] {logging_mixin.py:188} INFO - I am glad my case is not serious!
+[2025-07-20T15:19:50.288+0000] {logging_mixin.py:188} INFO - But these nervous troubles are dreadfully depressing.
+[2025-07-20T15:19:50.288+0000] {logging_mixin.py:188} INFO - John does not know how much I really suffer. He knows there is no
+[2025-07-20T15:19:50.289+0000] {logging_mixin.py:188} INFO - reason to suffer, and that satisfies him.
+[2025-07-20T15:19:50.289+0000] {logging_mixin.py:188} INFO - Of course it is only nervousness. It does weigh on me so not to do my
+[2025-07-20T15:19:50.290+0000] {logging_mixin.py:188} INFO - duty in any way!
+[2025-07-20T15:19:50.290+0000] {logging_mixin.py:188} INFO - I meant to be such a help to John, such a real rest and comfort, and
+[2025-07-20T15:19:50.291+0000] {logging_mixin.py:188} INFO - here I am a comparative burden already!
+[2025-07-20T15:19:50.291+0000] {logging_mixin.py:188} INFO - Nobody would believe what an effort it is to do what little I am
+[2025-07-20T15:19:50.292+0000] {logging_mixin.py:188} INFO - able—to dress and entertain, and order things.
+[2025-07-20T15:19:50.292+0000] {logging_mixin.py:188} INFO - It is fortunate Mary is so good with the baby. Such a dear baby!
+[2025-07-20T15:19:50.293+0000] {logging_mixin.py:188} INFO - And yet I cannot be with him, it makes me so nervous.
+[2025-07-20T15:19:50.293+0000] {logging_mixin.py:188} INFO - I suppose John never was nervous in his life. He laughs at me so about
+[2025-07-20T15:19:50.294+0000] {logging_mixin.py:188} INFO - this wallpaper!
+[2025-07-20T15:19:50.294+0000] {logging_mixin.py:188} INFO - At first he meant to repaper the room, but afterwards he said that I
+[2025-07-20T15:19:50.295+0000] {logging_mixin.py:188} INFO - was letting it get the better of me, and that nothing was worse for a
+[2025-07-20T15:19:50.295+0000] {logging_mixin.py:188} INFO - nervous patient than to give way to such fancies.
+[2025-07-20T15:19:50.296+0000] {logging_mixin.py:188} INFO - He said that after the wallpaper was changed it would be the heavy
+[2025-07-20T15:19:50.296+0000] {logging_mixin.py:188} INFO - bedstead, and then the barred windows, and then that gate at the head
+[2025-07-20T15:19:50.297+0000] {logging_mixin.py:188} INFO - of the stairs, and so on.
+[2025-07-20T15:19:50.297+0000] {logging_mixin.py:188} INFO - “You know the place is doing you good,” he said, “and really, dear, I
+[2025-07-20T15:19:50.298+0000] {logging_mixin.py:188} INFO - don’t care to renovate the house just for a three months’ rental.”
+[2025-07-20T15:19:50.298+0000] {logging_mixin.py:188} INFO - “Then do let us go downstairs,” I said, “there are such pretty rooms
+[2025-07-20T15:19:50.298+0000] {logging_mixin.py:188} INFO - there.”
+[2025-07-20T15:19:50.299+0000] {logging_mixin.py:188} INFO - Then he took me in his arms and called me a blessed little goose, and
+[2025-07-20T15:19:50.299+0000] {logging_mixin.py:188} INFO - said he would go down cellar if I wished, and have it whitewashed into
+[2025-07-20T15:19:50.300+0000] {logging_mixin.py:188} INFO - the bargain.
+[2025-07-20T15:19:50.300+0000] {logging_mixin.py:188} INFO - But he is right enough about the beds and windows and things.
+[2025-07-20T15:19:50.301+0000] {logging_mixin.py:188} INFO - It is as airy and comfortable a room as any one need wish, and, of
+[2025-07-20T15:19:50.301+0000] {logging_mixin.py:188} INFO - course, I would not be so silly as to make him uncomfortable just for a
+[2025-07-20T15:19:50.301+0000] {logging_mixin.py:188} INFO - whim.
+[2025-07-20T15:19:50.302+0000] {logging_mixin.py:188} INFO - I’m really getting quite fond of the big room, all but that horrid
+[2025-07-20T15:19:50.302+0000] {logging_mixin.py:188} INFO - paper.
+[2025-07-20T15:19:50.303+0000] {logging_mixin.py:188} INFO - Out of one window I can see the garden, those mysterious deep-shaded
+[2025-07-20T15:19:50.303+0000] {logging_mixin.py:188} INFO - arbors, the riotous old-fashioned flowers, and bushes and gnarly trees.
+[2025-07-20T15:19:50.303+0000] {logging_mixin.py:188} INFO - Out of another I get a lovely view of the bay and a little private
+[2025-07-20T15:19:50.304+0000] {logging_mixin.py:188} INFO - wharf belonging to the estate. There is a beautiful shaded lane that
+[2025-07-20T15:19:50.304+0000] {logging_mixin.py:188} INFO - runs down there from the house. I always fancy I see people walking in
+[2025-07-20T15:19:50.305+0000] {logging_mixin.py:188} INFO - these numerous paths and arbors, but John has cautioned me not to give
+[2025-07-20T15:19:50.305+0000] {logging_mixin.py:188} INFO - way to fancy in the least. He says that with my imaginative power and
+[2025-07-20T15:19:50.305+0000] {logging_mixin.py:188} INFO - habit of story-making a nervous weakness like mine is sure to lead to
+[2025-07-20T15:19:50.306+0000] {logging_mixin.py:188} INFO - all manner of excited fancies, and that I ought to use my will and good
+[2025-07-20T15:19:50.306+0000] {logging_mixin.py:188} INFO - sense to check the tendency. So I try.
+[2025-07-20T15:19:50.307+0000] {logging_mixin.py:188} INFO - I think sometimes that if I were only well enough to write a little it
+[2025-07-20T15:19:50.307+0000] {logging_mixin.py:188} INFO - would relieve the press of ideas and rest me.
+[2025-07-20T15:19:50.308+0000] {logging_mixin.py:188} INFO - But I find I get pretty tired when I try.
+[2025-07-20T15:19:50.308+0000] {logging_mixin.py:188} INFO - It is so discouraging not to have any advice and companionship about my
+[2025-07-20T15:19:50.309+0000] {logging_mixin.py:188} INFO - work. When I get really well John says we will ask Cousin Henry and
+[2025-07-20T15:19:50.309+0000] {logging_mixin.py:188} INFO - Julia down for a long visit; but he says he would as soon put
+[2025-07-20T15:19:50.310+0000] {logging_mixin.py:188} INFO - fire-works in my pillow-case as to let me have those stimulating people
+[2025-07-20T15:19:50.310+0000] {logging_mixin.py:188} INFO - about now.
+[2025-07-20T15:19:50.311+0000] {logging_mixin.py:188} INFO - I wish I could get well faster.
+[2025-07-20T15:19:50.311+0000] {logging_mixin.py:188} INFO - But I must not think about that. This paper looks to me as if it knew
+[2025-07-20T15:19:50.311+0000] {logging_mixin.py:188} INFO - what a vicious influence it had!
+[2025-07-20T15:19:50.312+0000] {logging_mixin.py:188} INFO - There is a recurrent spot where the pattern lolls like a broken neck
+[2025-07-20T15:19:50.312+0000] {logging_mixin.py:188} INFO - and two bulbous eyes stare at you upside-down.
+[2025-07-20T15:19:50.312+0000] {logging_mixin.py:188} INFO - I get positively angry with the impertinence of it and the
+[2025-07-20T15:19:50.313+0000] {logging_mixin.py:188} INFO - everlastingness. Up and down and sideways they crawl, and those absurd,
+[2025-07-20T15:19:50.313+0000] {logging_mixin.py:188} INFO - unblinking eyes are everywhere. There is one place where two breadths
+[2025-07-20T15:19:50.313+0000] {logging_mixin.py:188} INFO - didn’t match, and the eyes go all up and down the line, one a little
+[2025-07-20T15:19:50.313+0000] {logging_mixin.py:188} INFO - higher than the other.
+[2025-07-20T15:19:50.314+0000] {logging_mixin.py:188} INFO - I never saw so much expression in an inanimate thing before, and we all
+[2025-07-20T15:19:50.314+0000] {logging_mixin.py:188} INFO - know how much expression they have! I used to lie awake as a child and
+[2025-07-20T15:19:50.314+0000] {logging_mixin.py:188} INFO - get more entertainment and terror out of blank walls and plain
+[2025-07-20T15:19:50.315+0000] {logging_mixin.py:188} INFO - furniture than most children could find in a toy-store.
+[2025-07-20T15:19:50.315+0000] {logging_mixin.py:188} INFO - I remember what a kindly wink the knobs of our big old bureau used to
+[2025-07-20T15:19:50.315+0000] {logging_mixin.py:188} INFO - have, and there was one chair that always seemed like a strong friend.
+[2025-07-20T15:19:50.315+0000] {logging_mixin.py:188} INFO - I used to feel that if any of the other things looked too fierce I
+[2025-07-20T15:19:50.316+0000] {logging_mixin.py:188} INFO - could always hop into that chair and be safe.
+[2025-07-20T15:19:50.317+0000] {logging_mixin.py:188} INFO - The furniture in this room is no worse than inharmonious, however, for
+[2025-07-20T15:19:50.317+0000] {logging_mixin.py:188} INFO - we had to bring it all from downstairs. I suppose when this was used as
+[2025-07-20T15:19:50.318+0000] {logging_mixin.py:188} INFO - a playroom they had to take the nursery things out, and no wonder! I
+[2025-07-20T15:19:50.318+0000] {logging_mixin.py:188} INFO - never saw such ravages as the children have made here.
+[2025-07-20T15:19:50.318+0000] {logging_mixin.py:188} INFO - The wallpaper, as I said before, is torn off in spots, and it sticketh
+[2025-07-20T15:19:50.318+0000] {logging_mixin.py:188} INFO - closer than a brother—they must have had perseverance as well as
+[2025-07-20T15:19:50.319+0000] {logging_mixin.py:188} INFO - hatred.
+[2025-07-20T15:19:50.319+0000] {logging_mixin.py:188} INFO - Then the floor is scratched and gouged and splintered, the plaster
+[2025-07-20T15:19:50.319+0000] {logging_mixin.py:188} INFO - itself is dug out here and there, and this great heavy bed, which is
+[2025-07-20T15:19:50.320+0000] {logging_mixin.py:188} INFO - all we found in the room, looks as if it had been through the wars.
+[2025-07-20T15:19:50.320+0000] {logging_mixin.py:188} INFO - But I don’t mind it a bit—only the paper.
+[2025-07-20T15:19:50.320+0000] {logging_mixin.py:188} INFO - There comes John’s sister. Such a dear girl as she is, and so careful
+[2025-07-20T15:19:50.320+0000] {logging_mixin.py:188} INFO - of me! I must not let her find me writing.
+[2025-07-20T15:19:50.321+0000] {logging_mixin.py:188} INFO - She is a perfect, and enthusiastic housekeeper, and hopes for no better
+[2025-07-20T15:19:50.321+0000] {logging_mixin.py:188} INFO - profession. I verily believe she thinks it is the writing which made me
+[2025-07-20T15:19:50.321+0000] {logging_mixin.py:188} INFO - sick!
+[2025-07-20T15:19:50.322+0000] {logging_mixin.py:188} INFO - But I can write when she is out, and see her a long way off from these
+[2025-07-20T15:19:50.322+0000] {logging_mixin.py:188} INFO - windows.
+[2025-07-20T15:19:50.322+0000] {logging_mixin.py:188} INFO - There is one that commands the road, a lovely, shaded, winding road,
+[2025-07-20T15:19:50.322+0000] {logging_mixin.py:188} INFO - and one that just looks off over the country. A lovely country, too,
+[2025-07-20T15:19:50.323+0000] {logging_mixin.py:188} INFO - full of great elms and velvet meadows.
+[2025-07-20T15:19:50.323+0000] {logging_mixin.py:188} INFO - This wallpaper has a kind of sub-pattern in a different shade, a
+[2025-07-20T15:19:50.323+0000] {logging_mixin.py:188} INFO - particularly irritating one, for you can only see it in certain lights,
+[2025-07-20T15:19:50.323+0000] {logging_mixin.py:188} INFO - and not clearly then.
+[2025-07-20T15:19:50.324+0000] {logging_mixin.py:188} INFO - But in the places where it isn’t faded, and where the sun is just so, I
+[2025-07-20T15:19:50.324+0000] {logging_mixin.py:188} INFO - can see a strange, provoking, formless sort of figure, that seems to
+[2025-07-20T15:19:50.324+0000] {logging_mixin.py:188} INFO - sulk about behind that silly and conspicuous front design.
+[2025-07-20T15:19:50.325+0000] {logging_mixin.py:188} INFO - There’s sister on the stairs!
+[2025-07-20T15:19:50.326+0000] {logging_mixin.py:188} INFO - Well, the Fourth of July is over! The people are gone and I am tired
+[2025-07-20T15:19:50.326+0000] {logging_mixin.py:188} INFO - out. John thought it might do me good to see a little company, so we
+[2025-07-20T15:19:50.326+0000] {logging_mixin.py:188} INFO - just had mother and Nellie and the children down for a week.
+[2025-07-20T15:19:50.327+0000] {logging_mixin.py:188} INFO - Of course I didn’t do a thing. Jennie sees to everything now.
+[2025-07-20T15:19:50.327+0000] {logging_mixin.py:188} INFO - But it tired me all the same.
+[2025-07-20T15:19:50.327+0000] {logging_mixin.py:188} INFO - John says if I don’t pick up faster he shall send me to Weir Mitchell
+[2025-07-20T15:19:50.327+0000] {logging_mixin.py:188} INFO - in the fall.
+[2025-07-20T15:19:50.328+0000] {logging_mixin.py:188} INFO - But I don’t want to go there at all. I had a friend who was in his
+[2025-07-20T15:19:50.328+0000] {logging_mixin.py:188} INFO - hands once, and she says he is just like John and my brother, only more
+[2025-07-20T15:19:50.328+0000] {logging_mixin.py:188} INFO - so!
+[2025-07-20T15:19:50.329+0000] {logging_mixin.py:188} INFO - Besides, it is such an undertaking to go so far.
+[2025-07-20T15:19:50.329+0000] {logging_mixin.py:188} INFO - I don’t feel as if it was worth while to turn my hand over for
+[2025-07-20T15:19:50.329+0000] {logging_mixin.py:188} INFO - anything, and I’m getting dreadfully fretful and querulous.
+[2025-07-20T15:19:50.330+0000] {logging_mixin.py:188} INFO - I cry at nothing, and cry most of the time.
+[2025-07-20T15:19:50.330+0000] {logging_mixin.py:188} INFO - Of course I don’t when John is here, or anybody else, but when I am
+[2025-07-20T15:19:50.331+0000] {logging_mixin.py:188} INFO - alone.
+[2025-07-20T15:19:50.331+0000] {logging_mixin.py:188} INFO - And I am alone a good deal just now. John is kept in town very often by
+[2025-07-20T15:19:50.331+0000] {logging_mixin.py:188} INFO - serious cases, and Jennie is good and lets me alone when I want her to.
+[2025-07-20T15:19:50.332+0000] {logging_mixin.py:188} INFO - So I walk a little in the garden or down that lovely lane, sit on the
+[2025-07-20T15:19:50.332+0000] {logging_mixin.py:188} INFO - porch under the roses, and lie down up here a good deal.
+[2025-07-20T15:19:50.332+0000] {logging_mixin.py:188} INFO - I’m getting really fond of the room in spite of the wallpaper. Perhaps
+[2025-07-20T15:19:50.333+0000] {logging_mixin.py:188} INFO - because of the wallpaper.
+[2025-07-20T15:19:50.333+0000] {logging_mixin.py:188} INFO - It dwells in my mind so!
+[2025-07-20T15:19:50.333+0000] {logging_mixin.py:188} INFO - I lie here on this great immovable bed—it is nailed down, I believe—and
+[2025-07-20T15:19:50.333+0000] {logging_mixin.py:188} INFO - follow that pattern about by the hour. It is as good as gymnastics, I
+[2025-07-20T15:19:50.334+0000] {logging_mixin.py:188} INFO - assure you. I start, we’ll say, at the bottom, down in the corner over
+[2025-07-20T15:19:50.334+0000] {logging_mixin.py:188} INFO - there where it has not been touched, and I determine for the thousandth
+[2025-07-20T15:19:50.334+0000] {logging_mixin.py:188} INFO - time that I will follow that pointless pattern to some sort of a
+[2025-07-20T15:19:50.334+0000] {logging_mixin.py:188} INFO - conclusion.
+[2025-07-20T15:19:50.335+0000] {logging_mixin.py:188} INFO - I know a little of the principle of design, and I know this thing was
+[2025-07-20T15:19:50.335+0000] {logging_mixin.py:188} INFO - not arranged on any laws of radiation, or alternation, or repetition,
+[2025-07-20T15:19:50.335+0000] {logging_mixin.py:188} INFO - or symmetry, or anything else that I ever heard of.
+[2025-07-20T15:19:50.336+0000] {logging_mixin.py:188} INFO - It is repeated, of course, by the breadths, but not otherwise.
+[2025-07-20T15:19:50.336+0000] {logging_mixin.py:188} INFO - Looked at in one way each breadth stands alone, the bloated curves and
+[2025-07-20T15:19:50.336+0000] {logging_mixin.py:188} INFO - flourishes—a kind of “debased Romanesque” with delirium tremens—go
+[2025-07-20T15:19:50.336+0000] {logging_mixin.py:188} INFO - waddling up and down in isolated columns of fatuity.
+[2025-07-20T15:19:50.337+0000] {logging_mixin.py:188} INFO - But, on the other hand, they connect diagonally, and the sprawling
+[2025-07-20T15:19:50.337+0000] {logging_mixin.py:188} INFO - outlines run off in great slanting waves of optic horror, like a lot of
+[2025-07-20T15:19:50.338+0000] {logging_mixin.py:188} INFO - wallowing seaweeds in full chase.
+[2025-07-20T15:19:50.338+0000] {logging_mixin.py:188} INFO - The whole thing goes horizontally, too, at least it seems so, and I
+[2025-07-20T15:19:50.338+0000] {logging_mixin.py:188} INFO - exhaust myself in trying to distinguish the order of its going in that
+[2025-07-20T15:19:50.338+0000] {logging_mixin.py:188} INFO - direction.
+[2025-07-20T15:19:50.339+0000] {logging_mixin.py:188} INFO - They have used a horizontal breadth for a frieze, and that adds
+[2025-07-20T15:19:50.339+0000] {logging_mixin.py:188} INFO - wonderfully to the confusion.
+[2025-07-20T15:19:50.339+0000] {logging_mixin.py:188} INFO - There is one end of the room where it is almost intact, and there, when
+[2025-07-20T15:19:50.340+0000] {logging_mixin.py:188} INFO - the cross-lights fade and the low sun shines directly upon it, I can
+[2025-07-20T15:19:50.340+0000] {logging_mixin.py:188} INFO - almost fancy radiation after all,—the interminable grotesques seem to
+[2025-07-20T15:19:50.341+0000] {logging_mixin.py:188} INFO - form around a common centre and rush off in headlong plunges of equal
+[2025-07-20T15:19:50.341+0000] {logging_mixin.py:188} INFO - distraction.
+[2025-07-20T15:19:50.341+0000] {logging_mixin.py:188} INFO - It makes me tired to follow it. I will take a nap, I guess.
+[2025-07-20T15:19:50.342+0000] {logging_mixin.py:188} INFO - I don’t know why I should write this.
+[2025-07-20T15:19:50.342+0000] {logging_mixin.py:188} INFO - I don’t want to.
+[2025-07-20T15:19:50.342+0000] {logging_mixin.py:188} INFO - I don’t feel able.
+[2025-07-20T15:19:50.343+0000] {logging_mixin.py:188} INFO - And I know John would think it absurd. But I must say what I feel and
+[2025-07-20T15:19:50.343+0000] {logging_mixin.py:188} INFO - think in some way—it is such a relief!
+[2025-07-20T15:19:50.343+0000] {logging_mixin.py:188} INFO - But the effort is getting to be greater than the relief.
+[2025-07-20T15:19:50.344+0000] {logging_mixin.py:188} INFO - Half the time now I am awfully lazy, and lie down ever so much.
+[2025-07-20T15:19:50.344+0000] {logging_mixin.py:188} INFO - John says I mustn’t lose my strength, and has me take cod-liver oil and
+[2025-07-20T15:19:50.344+0000] {logging_mixin.py:188} INFO - lots of tonics and things, to say nothing of ale and wine and rare
+[2025-07-20T15:19:50.344+0000] {logging_mixin.py:188} INFO - meat.
+[2025-07-20T15:19:50.345+0000] {logging_mixin.py:188} INFO - Dear John! He loves me very dearly, and hates to have me sick. I tried
+[2025-07-20T15:19:50.345+0000] {logging_mixin.py:188} INFO - to have a real earnest reasonable talk with him the other day, and tell
+[2025-07-20T15:19:50.345+0000] {logging_mixin.py:188} INFO - him how I wish he would let me go and make a visit to Cousin Henry and
+[2025-07-20T15:19:50.346+0000] {logging_mixin.py:188} INFO - Julia.
+[2025-07-20T15:19:50.346+0000] {logging_mixin.py:188} INFO - But he said I wasn’t able to go, nor able to stand it after I got
+[2025-07-20T15:19:50.347+0000] {logging_mixin.py:188} INFO - there; and I did not make out a very good case for myself, for I was
+[2025-07-20T15:19:50.347+0000] {logging_mixin.py:188} INFO - crying before I had finished.
+[2025-07-20T15:19:50.347+0000] {logging_mixin.py:188} INFO - It is getting to be a great effort for me to think straight. Just this
+[2025-07-20T15:19:50.347+0000] {logging_mixin.py:188} INFO - nervous weakness, I suppose.
+[2025-07-20T15:19:50.348+0000] {logging_mixin.py:188} INFO - And dear John gathered me up in his arms, and just carried me upstairs
+[2025-07-20T15:19:50.348+0000] {logging_mixin.py:188} INFO - and laid me on the bed, and sat by me and read to me till it tired my
+[2025-07-20T15:19:50.348+0000] {logging_mixin.py:188} INFO - head.
+[2025-07-20T15:19:50.349+0000] {logging_mixin.py:188} INFO - He said I was his darling and his comfort and all he had, and that I
+[2025-07-20T15:19:50.349+0000] {logging_mixin.py:188} INFO - must take care of myself for his sake, and keep well.
+[2025-07-20T15:19:50.349+0000] {logging_mixin.py:188} INFO - He says no one but myself can help me out of it, that I must use my
+[2025-07-20T15:19:50.349+0000] {logging_mixin.py:188} INFO - will and self-control and not let any silly fancies run away with me.
+[2025-07-20T15:19:50.350+0000] {logging_mixin.py:188} INFO - There’s one comfort, the baby is well and happy, and does not have to
+[2025-07-20T15:19:50.350+0000] {logging_mixin.py:188} INFO - occupy this nursery with the horrid wallpaper.
+[2025-07-20T15:19:50.350+0000] {logging_mixin.py:188} INFO - If we had not used it that blessed child would have! What a fortunate
+[2025-07-20T15:19:50.351+0000] {logging_mixin.py:188} INFO - escape! Why, I wouldn’t have a child of mine, an impressionable little
+[2025-07-20T15:19:50.351+0000] {logging_mixin.py:188} INFO - thing, live in such a room for worlds.
+[2025-07-20T15:19:50.351+0000] {logging_mixin.py:188} INFO - I never thought of it before, but it is lucky that John kept me here
+[2025-07-20T15:19:50.351+0000] {logging_mixin.py:188} INFO - after all. I can stand it so much easier than a baby, you see.
+[2025-07-20T15:19:50.352+0000] {logging_mixin.py:188} INFO - Of course I never mention it to them any more,—I am too wise,—but I
+[2025-07-20T15:19:50.352+0000] {logging_mixin.py:188} INFO - keep watch of it all the same.
+[2025-07-20T15:19:50.352+0000] {logging_mixin.py:188} INFO - There are things in that paper that nobody knows but me, or ever will.
+[2025-07-20T15:19:50.353+0000] {logging_mixin.py:188} INFO - Behind that outside pattern the dim shapes get clearer every day.
+[2025-07-20T15:19:50.353+0000] {logging_mixin.py:188} INFO - It is always the same shape, only very numerous.
+[2025-07-20T15:19:50.353+0000] {logging_mixin.py:188} INFO - And it is like a woman stooping down and creeping about behind that
+[2025-07-20T15:19:50.354+0000] {logging_mixin.py:188} INFO - pattern. I don’t like it a bit. I wonder—I begin to think—I wish John
+[2025-07-20T15:19:50.354+0000] {logging_mixin.py:188} INFO - would take me away from here!
+[2025-07-20T15:19:50.354+0000] {logging_mixin.py:188} INFO - It is so hard to talk with John about my case, because he is so wise,
+[2025-07-20T15:19:50.355+0000] {logging_mixin.py:188} INFO - and because he loves me so.
+[2025-07-20T15:19:50.355+0000] {logging_mixin.py:188} INFO - But I tried it last night.
+[2025-07-20T15:19:50.356+0000] {logging_mixin.py:188} INFO - It was moonlight. The moon shines in all around, just as the sun does.
+[2025-07-20T15:19:50.356+0000] {logging_mixin.py:188} INFO - I hate to see it sometimes, it creeps so slowly, and always comes in by
+[2025-07-20T15:19:50.357+0000] {logging_mixin.py:188} INFO - one window or another.
+[2025-07-20T15:19:50.357+0000] {logging_mixin.py:188} INFO - John was asleep and I hated to waken him, so I kept still and watched
+[2025-07-20T15:19:50.357+0000] {logging_mixin.py:188} INFO - the moonlight on that undulating wallpaper till I felt creepy.
+[2025-07-20T15:19:50.357+0000] {logging_mixin.py:188} INFO - The faint figure behind seemed to shake the pattern, just as if she
+[2025-07-20T15:19:50.358+0000] {logging_mixin.py:188} INFO - wanted to get out.
+[2025-07-20T15:19:50.358+0000] {logging_mixin.py:188} INFO - I got up softly and went to feel and see if the paper did move, and
+[2025-07-20T15:19:50.358+0000] {logging_mixin.py:188} INFO - when I came back John was awake.
+[2025-07-20T15:19:50.359+0000] {logging_mixin.py:188} INFO - “What is it, little girl?” he said. “Don’t go walking about like
+[2025-07-20T15:19:50.359+0000] {logging_mixin.py:188} INFO - that—you’ll get cold.”
+[2025-07-20T15:19:50.360+0000] {logging_mixin.py:188} INFO - I thought it was a good time to talk, so I told him that I really was
+[2025-07-20T15:19:50.360+0000] {logging_mixin.py:188} INFO - not gaining here, and that I wished he would take me away.
+[2025-07-20T15:19:50.360+0000] {logging_mixin.py:188} INFO - “Why darling!” said he, “our lease will be up in three weeks, and I
+[2025-07-20T15:19:50.360+0000] {logging_mixin.py:188} INFO - can’t see how to leave before.
+[2025-07-20T15:19:50.361+0000] {logging_mixin.py:188} INFO - “The repairs are not done at home, and I cannot possibly leave town
+[2025-07-20T15:19:50.361+0000] {logging_mixin.py:188} INFO - just now. Of course if you were in any danger I could and would, but
+[2025-07-20T15:19:50.361+0000] {logging_mixin.py:188} INFO - you really are better, dear, whether you can see it or not. I am a
+[2025-07-20T15:19:50.361+0000] {logging_mixin.py:188} INFO - doctor, dear, and I know. You are gaining flesh and color, your
+[2025-07-20T15:19:50.362+0000] {logging_mixin.py:188} INFO - appetite is better. I feel really much easier about you.”
+[2025-07-20T15:19:50.362+0000] {logging_mixin.py:188} INFO - “I don’t weigh a bit more,” said I, “nor as much; and my appetite may
+[2025-07-20T15:19:50.363+0000] {logging_mixin.py:188} INFO - be better in the evening, when you are here, but it is worse in the
+[2025-07-20T15:19:50.363+0000] {logging_mixin.py:188} INFO - morning when you are away.”
+[2025-07-20T15:19:50.363+0000] {logging_mixin.py:188} INFO - “Bless her little heart!” said he with a big hug; “she shall be as sick
+[2025-07-20T15:19:50.363+0000] {logging_mixin.py:188} INFO - as she pleases! But now let’s improve the shining hours by going to
+[2025-07-20T15:19:50.364+0000] {logging_mixin.py:188} INFO - sleep, and talk about it in the morning!”
+[2025-07-20T15:19:50.364+0000] {logging_mixin.py:188} INFO - “And you won’t go away?” I asked gloomily.
+[2025-07-20T15:19:50.364+0000] {logging_mixin.py:188} INFO - “Why, how can I, dear? It is only three weeks more and then we will
+[2025-07-20T15:19:50.365+0000] {logging_mixin.py:188} INFO - take a nice little trip of a few days while Jennie is getting the house
+[2025-07-20T15:19:50.365+0000] {logging_mixin.py:188} INFO - ready. Really, dear, you are better!”
+[2025-07-20T15:19:50.366+0000] {logging_mixin.py:188} INFO - “Better in body perhaps”—I began, and stopped short, for he sat up
+[2025-07-20T15:19:50.366+0000] {logging_mixin.py:188} INFO - straight and looked at me with such a stern, reproachful look that I
+[2025-07-20T15:19:50.366+0000] {logging_mixin.py:188} INFO - could not say another word.
+[2025-07-20T15:19:50.366+0000] {logging_mixin.py:188} INFO - “My darling,” said he, “I beg of you, for my sake and for our child’s
+[2025-07-20T15:19:50.367+0000] {logging_mixin.py:188} INFO - sake, as well as for your own, that you will never for one instant let
+[2025-07-20T15:19:50.367+0000] {logging_mixin.py:188} INFO - that idea enter your mind! There is nothing so dangerous, so
+[2025-07-20T15:19:50.367+0000] {logging_mixin.py:188} INFO - fascinating, to a temperament like yours. It is a false and foolish
+[2025-07-20T15:19:50.368+0000] {logging_mixin.py:188} INFO - fancy. Can you not trust me as a physician when I tell you so?”
+[2025-07-20T15:19:50.368+0000] {logging_mixin.py:188} INFO - So of course I said no more on that score, and we went to sleep before
+[2025-07-20T15:19:50.368+0000] {logging_mixin.py:188} INFO - long. He thought I was asleep first, but I wasn’t,—I lay there for
+[2025-07-20T15:19:50.368+0000] {logging_mixin.py:188} INFO - hours trying to decide whether that front pattern and the back pattern
+[2025-07-20T15:19:50.369+0000] {logging_mixin.py:188} INFO - really did move together or separately.
+[2025-07-20T15:19:50.369+0000] {logging_mixin.py:188} INFO - On a pattern like this, by daylight, there is a lack of sequence, a
+[2025-07-20T15:19:50.369+0000] {logging_mixin.py:188} INFO - defiance of law, that is a constant irritant to a normal mind.
+[2025-07-20T15:19:50.369+0000] {logging_mixin.py:188} INFO - The color is hideous enough, and unreliable enough, and infuriating
+[2025-07-20T15:19:50.370+0000] {logging_mixin.py:188} INFO - enough, but the pattern is torturing.
+[2025-07-20T15:19:50.370+0000] {logging_mixin.py:188} INFO - You think you have mastered it, but just as you get well under way in
+[2025-07-20T15:19:50.371+0000] {logging_mixin.py:188} INFO - following, it turns a back somersault and there you are. It slaps you
+[2025-07-20T15:19:50.371+0000] {logging_mixin.py:188} INFO - in the face, knocks you down, and tramples upon you. It is like a bad
+[2025-07-20T15:19:50.372+0000] {logging_mixin.py:188} INFO - dream.
+[2025-07-20T15:19:50.372+0000] {logging_mixin.py:188} INFO - The outside pattern is a florid arabesque, reminding one of a fungus.
+[2025-07-20T15:19:50.372+0000] {logging_mixin.py:188} INFO - If you can imagine a toadstool in joints, an interminable string of
+[2025-07-20T15:19:50.373+0000] {logging_mixin.py:188} INFO - toadstools, budding and sprouting in endless convolutions,—why, that is
+[2025-07-20T15:19:50.373+0000] {logging_mixin.py:188} INFO - something like it.
+[2025-07-20T15:19:50.373+0000] {logging_mixin.py:188} INFO - That is, sometimes!
+[2025-07-20T15:19:50.374+0000] {logging_mixin.py:188} INFO - There is one marked peculiarity about this paper, a thing nobody seems
+[2025-07-20T15:19:50.374+0000] {logging_mixin.py:188} INFO - to notice but myself, and that is that it changes as the light changes.
+[2025-07-20T15:19:50.374+0000] {logging_mixin.py:188} INFO - When the sun shoots in through the east window—I always watch for that
+[2025-07-20T15:19:50.375+0000] {logging_mixin.py:188} INFO - first long, straight ray—it changes so quickly that I never can quite
+[2025-07-20T15:19:50.375+0000] {logging_mixin.py:188} INFO - believe it.
+[2025-07-20T15:19:50.375+0000] {logging_mixin.py:188} INFO - That is why I watch it always.
+[2025-07-20T15:19:50.376+0000] {logging_mixin.py:188} INFO - By moonlight—the moon shines in all night when there is a moon—I
+[2025-07-20T15:19:50.376+0000] {logging_mixin.py:188} INFO - wouldn’t know it was the same paper.
+[2025-07-20T15:19:50.376+0000] {logging_mixin.py:188} INFO - At night in any kind of light, in twilight, candlelight, lamplight, and
+[2025-07-20T15:19:50.376+0000] {logging_mixin.py:188} INFO - worst of all by moonlight, it becomes bars! The outside pattern I mean,
+[2025-07-20T15:19:50.377+0000] {logging_mixin.py:188} INFO - and the woman behind it is as plain as can be.
+[2025-07-20T15:19:50.377+0000] {logging_mixin.py:188} INFO - I didn’t realize for a long time what the thing was that showed
+[2025-07-20T15:19:50.377+0000] {logging_mixin.py:188} INFO - behind,—that dim sub-pattern,—but now I am quite sure it is a woman.
+[2025-07-20T15:19:50.378+0000] {logging_mixin.py:188} INFO - By daylight she is subdued, quiet. I fancy it is the pattern that keeps
+[2025-07-20T15:19:50.378+0000] {logging_mixin.py:188} INFO - her so still. It is so puzzling. It keeps me quiet by the hour.
+[2025-07-20T15:19:50.378+0000] {logging_mixin.py:188} INFO - I lie down ever so much now. John says it is good for me, and to sleep
+[2025-07-20T15:19:50.378+0000] {logging_mixin.py:188} INFO - all I can.
+[2025-07-20T15:19:50.379+0000] {logging_mixin.py:188} INFO - Indeed, he started the habit by making me lie down for an hour after
+[2025-07-20T15:19:50.379+0000] {logging_mixin.py:188} INFO - each meal.
+[2025-07-20T15:19:50.379+0000] {logging_mixin.py:188} INFO - It is a very bad habit, I am convinced, for, you see, I don’t sleep.
+[2025-07-20T15:19:50.380+0000] {logging_mixin.py:188} INFO - And that cultivates deceit, for I don’t tell them I’m awake,—oh, no!
+[2025-07-20T15:19:50.380+0000] {logging_mixin.py:188} INFO - The fact is, I am getting a little afraid of John.
+[2025-07-20T15:19:50.380+0000] {logging_mixin.py:188} INFO - He seems very queer sometimes, and even Jennie has an inexplicable
+[2025-07-20T15:19:50.380+0000] {logging_mixin.py:188} INFO - look.
+[2025-07-20T15:19:50.381+0000] {logging_mixin.py:188} INFO - It strikes me occasionally, just as a scientific hypothesis, that
+[2025-07-20T15:19:50.381+0000] {logging_mixin.py:188} INFO - perhaps it is the paper!
+[2025-07-20T15:19:50.381+0000] {logging_mixin.py:188} INFO - I have watched John when he did not know I was looking, and come into
+[2025-07-20T15:19:50.382+0000] {logging_mixin.py:188} INFO - the room suddenly on the most innocent excuses, and I’ve caught him
+[2025-07-20T15:19:50.382+0000] {logging_mixin.py:188} INFO - several times looking at the paper! And Jennie too. I caught Jennie
+[2025-07-20T15:19:50.382+0000] {logging_mixin.py:188} INFO - with her hand on it once.
+[2025-07-20T15:19:50.383+0000] {logging_mixin.py:188} INFO - She didn’t know I was in the room, and when I asked her in a quiet, a
+[2025-07-20T15:19:50.383+0000] {logging_mixin.py:188} INFO - very quiet voice, with the most restrained manner possible, what she
+[2025-07-20T15:19:50.383+0000] {logging_mixin.py:188} INFO - was doing with the paper she turned around as if she had been caught
+[2025-07-20T15:19:50.384+0000] {logging_mixin.py:188} INFO - stealing, and looked quite angry—asked me why I should frighten her so!
+[2025-07-20T15:19:50.384+0000] {logging_mixin.py:188} INFO - Then she said that the paper stained everything it touched, that she
+[2025-07-20T15:19:50.384+0000] {logging_mixin.py:188} INFO - had found yellow smooches on all my clothes and John’s, and she wished
+[2025-07-20T15:19:50.384+0000] {logging_mixin.py:188} INFO - we would be more careful!
+[2025-07-20T15:19:50.385+0000] {logging_mixin.py:188} INFO - Did not that sound innocent? But I know she was studying that pattern,
+[2025-07-20T15:19:50.385+0000] {logging_mixin.py:188} INFO - and I am determined that nobody shall find it out but myself!
+[2025-07-20T15:19:50.385+0000] {logging_mixin.py:188} INFO - Life is very much more exciting now than it used to be. You see I have
+[2025-07-20T15:19:50.386+0000] {logging_mixin.py:188} INFO - something more to expect, to look forward to, to watch. I really do eat
+[2025-07-20T15:19:50.386+0000] {logging_mixin.py:188} INFO - better, and am more quiet than I was.
+[2025-07-20T15:19:50.387+0000] {logging_mixin.py:188} INFO - John is so pleased to see me improve! He laughed a little the other
+[2025-07-20T15:19:50.387+0000] {logging_mixin.py:188} INFO - day, and said I seemed to be flourishing in spite of my wallpaper.
+[2025-07-20T15:19:50.388+0000] {logging_mixin.py:188} INFO - I turned it off with a laugh. I had no intention of telling him it was
+[2025-07-20T15:19:50.388+0000] {logging_mixin.py:188} INFO - because of the wallpaper—he would make fun of me. He might even want to
+[2025-07-20T15:19:50.389+0000] {logging_mixin.py:188} INFO - take me away.
+[2025-07-20T15:19:50.389+0000] {logging_mixin.py:188} INFO - I don’t want to leave now until I have found it out. There is a week
+[2025-07-20T15:19:50.389+0000] {logging_mixin.py:188} INFO - more, and I think that will be enough.
+[2025-07-20T15:19:50.390+0000] {logging_mixin.py:188} INFO - I’m feeling ever so much better! I don’t sleep much at night, for it is
+[2025-07-20T15:19:50.390+0000] {logging_mixin.py:188} INFO - so interesting to watch developments; but I sleep a good deal in the
+[2025-07-20T15:19:50.391+0000] {logging_mixin.py:188} INFO - daytime.
+[2025-07-20T15:19:50.391+0000] {logging_mixin.py:188} INFO - In the daytime it is tiresome and perplexing.
+[2025-07-20T15:19:50.392+0000] {logging_mixin.py:188} INFO - There are always new shoots on the fungus, and new shades of yellow all
+[2025-07-20T15:19:50.392+0000] {logging_mixin.py:188} INFO - over it. I cannot keep count of them, though I have tried
+[2025-07-20T15:19:50.392+0000] {logging_mixin.py:188} INFO - conscientiously.
+[2025-07-20T15:19:50.393+0000] {logging_mixin.py:188} INFO - It is the strangest yellow, that wallpaper! It makes me think of all
+[2025-07-20T15:19:50.393+0000] {logging_mixin.py:188} INFO - the yellow things I ever saw—not beautiful ones like buttercups, but
+[2025-07-20T15:19:50.393+0000] {logging_mixin.py:188} INFO - old foul, bad yellow things.
+[2025-07-20T15:19:50.393+0000] {logging_mixin.py:188} INFO - But there is something else about that paper—the smell! I noticed it
+[2025-07-20T15:19:50.394+0000] {logging_mixin.py:188} INFO - the moment we came into the room, but with so much air and sun it was
+[2025-07-20T15:19:50.394+0000] {logging_mixin.py:188} INFO - not bad. Now we have had a week of fog and rain, and whether the
+[2025-07-20T15:19:50.394+0000] {logging_mixin.py:188} INFO - windows are open or not, the smell is here.
+[2025-07-20T15:19:50.395+0000] {logging_mixin.py:188} INFO - It creeps all over the house.
+[2025-07-20T15:19:50.395+0000] {logging_mixin.py:188} INFO - I find it hovering in the dining-room, skulking in the parlor, hiding
+[2025-07-20T15:19:50.395+0000] {logging_mixin.py:188} INFO - in the hall, lying in wait for me on the stairs.
+[2025-07-20T15:19:50.396+0000] {logging_mixin.py:188} INFO - It gets into my hair.
+[2025-07-20T15:19:50.396+0000] {logging_mixin.py:188} INFO - Even when I go to ride, if I turn my head suddenly and surprise
+[2025-07-20T15:19:50.396+0000] {logging_mixin.py:188} INFO - it—there is that smell!
+[2025-07-20T15:19:50.396+0000] {logging_mixin.py:188} INFO - Such a peculiar odor, too! I have spent hours in trying to analyze it,
+[2025-07-20T15:19:50.397+0000] {logging_mixin.py:188} INFO - to find what it smelled like.
+[2025-07-20T15:19:50.397+0000] {logging_mixin.py:188} INFO - It is not bad—at first, and very gentle, but quite the subtlest, most
+[2025-07-20T15:19:50.397+0000] {logging_mixin.py:188} INFO - enduring odor I ever met.
+[2025-07-20T15:19:50.398+0000] {logging_mixin.py:188} INFO - In this damp weather it is awful. I wake up in the night and find it
+[2025-07-20T15:19:50.398+0000] {logging_mixin.py:188} INFO - hanging over me.
+[2025-07-20T15:19:50.398+0000] {logging_mixin.py:188} INFO - It used to disturb me at first. I thought seriously of burning the
+[2025-07-20T15:19:50.398+0000] {logging_mixin.py:188} INFO - house—to reach the smell.
+[2025-07-20T15:19:50.399+0000] {logging_mixin.py:188} INFO - But now I am used to it. The only thing I can think of that it is like
+[2025-07-20T15:19:50.399+0000] {logging_mixin.py:188} INFO - is the color of the paper! A yellow smell.
+[2025-07-20T15:19:50.399+0000] {logging_mixin.py:188} INFO - There is a very funny mark on this wall, low down, near the mopboard. A
+[2025-07-20T15:19:50.399+0000] {logging_mixin.py:188} INFO - streak that runs round the room. It goes behind every piece of
+[2025-07-20T15:19:50.400+0000] {logging_mixin.py:188} INFO - furniture, except the bed, a long, straight, even smooch, as if it had
+[2025-07-20T15:19:50.400+0000] {logging_mixin.py:188} INFO - been rubbed over and over.
+[2025-07-20T15:19:50.400+0000] {logging_mixin.py:188} INFO - I wonder how it was done and who did it, and what they did it for.
+[2025-07-20T15:19:50.400+0000] {logging_mixin.py:188} INFO - Round and round and round—round and round and round—it makes me dizzy!
+[2025-07-20T15:19:50.401+0000] {logging_mixin.py:188} INFO - I really have discovered something at last.
+[2025-07-20T15:19:50.402+0000] {logging_mixin.py:188} INFO - Through watching so much at night, when it changes so, I have finally
+[2025-07-20T15:19:50.402+0000] {logging_mixin.py:188} INFO - found out.
+[2025-07-20T15:19:50.402+0000] {logging_mixin.py:188} INFO - The front pattern does move—and no wonder! The woman behind shakes it!
+[2025-07-20T15:19:50.403+0000] {logging_mixin.py:188} INFO - Sometimes I think there are a great many women behind, and sometimes
+[2025-07-20T15:19:50.403+0000] {logging_mixin.py:188} INFO - only one, and she crawls around fast, and her crawling shakes it all
+[2025-07-20T15:19:50.403+0000] {logging_mixin.py:188} INFO - over.
+[2025-07-20T15:19:50.403+0000] {logging_mixin.py:188} INFO - Then in the very bright spots she keeps still, and in the very shady
+[2025-07-20T15:19:50.404+0000] {logging_mixin.py:188} INFO - spots she just takes hold of the bars and shakes them hard.
+[2025-07-20T15:19:50.404+0000] {logging_mixin.py:188} INFO - And she is all the time trying to climb through. But nobody could climb
+[2025-07-20T15:19:50.404+0000] {logging_mixin.py:188} INFO - through that pattern—it strangles so; I think that is why it has so
+[2025-07-20T15:19:50.405+0000] {logging_mixin.py:188} INFO - many heads.
+[2025-07-20T15:19:50.405+0000] {logging_mixin.py:188} INFO - They get through, and then the pattern strangles them off and turns
+[2025-07-20T15:19:50.405+0000] {logging_mixin.py:188} INFO - them upside-down, and makes their eyes white!
+[2025-07-20T15:19:50.405+0000] {logging_mixin.py:188} INFO - If those heads were covered or taken off it would not be half so bad.
+[2025-07-20T15:19:50.406+0000] {logging_mixin.py:188} INFO - I think that woman gets out in the daytime!
+[2025-07-20T15:19:50.406+0000] {logging_mixin.py:188} INFO - And I’ll tell you why—privately—I’ve seen her!
+[2025-07-20T15:19:50.406+0000] {logging_mixin.py:188} INFO - I can see her out of every one of my windows!
+[2025-07-20T15:19:50.407+0000] {logging_mixin.py:188} INFO - It is the same woman, I know, for she is always creeping, and most
+[2025-07-20T15:19:50.407+0000] {logging_mixin.py:188} INFO - women do not creep by daylight.
+[2025-07-20T15:19:50.407+0000] {logging_mixin.py:188} INFO - I see her on that long shaded lane, creeping up and down. I see her in
+[2025-07-20T15:19:50.407+0000] {logging_mixin.py:188} INFO - those dark grape arbors, creeping all around the garden.
+[2025-07-20T15:19:50.408+0000] {logging_mixin.py:188} INFO - I see her on that long road under the trees, creeping along, and when a
+[2025-07-20T15:19:50.408+0000] {logging_mixin.py:188} INFO - carriage comes she hides under the blackberry vines.
+[2025-07-20T15:19:50.408+0000] {logging_mixin.py:188} INFO - I don’t blame her a bit. It must be very humiliating to be caught
+[2025-07-20T15:19:50.408+0000] {logging_mixin.py:188} INFO - creeping by daylight!
+[2025-07-20T15:19:50.409+0000] {logging_mixin.py:188} INFO - I always lock the door when I creep by daylight. I can’t do it at
+[2025-07-20T15:19:50.409+0000] {logging_mixin.py:188} INFO - night, for I know John would suspect something at once.
+[2025-07-20T15:19:50.409+0000] {logging_mixin.py:188} INFO - And John is so queer now, that I don’t want to irritate him. I wish he
+[2025-07-20T15:19:50.409+0000] {logging_mixin.py:188} INFO - would take another room! Besides, I don’t want anybody to get that
+[2025-07-20T15:19:50.410+0000] {logging_mixin.py:188} INFO - woman out at night but myself.
+[2025-07-20T15:19:50.410+0000] {logging_mixin.py:188} INFO - I often wonder if I could see her out of all the windows at once.
+[2025-07-20T15:19:50.410+0000] {logging_mixin.py:188} INFO - But, turn as fast as I can, I can only see out of one at one time.
+[2025-07-20T15:19:50.411+0000] {logging_mixin.py:188} INFO - And though I always see her she may be able to creep faster than I can
+[2025-07-20T15:19:50.411+0000] {logging_mixin.py:188} INFO - turn!
+[2025-07-20T15:19:50.411+0000] {logging_mixin.py:188} INFO - I have watched her sometimes away off in the open country, creeping as
+[2025-07-20T15:19:50.411+0000] {logging_mixin.py:188} INFO - fast as a cloud shadow in a high wind.
+[2025-07-20T15:19:50.412+0000] {logging_mixin.py:188} INFO - If only that top pattern could be gotten off from the under one! I mean
+[2025-07-20T15:19:50.412+0000] {logging_mixin.py:188} INFO - to try it, little by little.
+[2025-07-20T15:19:50.412+0000] {logging_mixin.py:188} INFO - I have found out another funny thing, but I shan’t tell it this time!
+[2025-07-20T15:19:50.412+0000] {logging_mixin.py:188} INFO - It does not do to trust people too much.
+[2025-07-20T15:19:50.413+0000] {logging_mixin.py:188} INFO - There are only two more days to get this paper off, and I believe John
+[2025-07-20T15:19:50.413+0000] {logging_mixin.py:188} INFO - is beginning to notice. I don’t like the look in his eyes.
+[2025-07-20T15:19:50.413+0000] {logging_mixin.py:188} INFO - And I heard him ask Jennie a lot of professional questions about me.
+[2025-07-20T15:19:50.413+0000] {logging_mixin.py:188} INFO - She had a very good report to give.
+[2025-07-20T15:19:50.414+0000] {logging_mixin.py:188} INFO - She said I slept a good deal in the daytime.
+[2025-07-20T15:19:50.414+0000] {logging_mixin.py:188} INFO - John knows I don’t sleep very well at night, for all I’m so quiet!
+[2025-07-20T15:19:50.414+0000] {logging_mixin.py:188} INFO - He asked me all sorts of questions, too, and pretended to be very
+[2025-07-20T15:19:50.415+0000] {logging_mixin.py:188} INFO - loving and kind.
+[2025-07-20T15:19:50.415+0000] {logging_mixin.py:188} INFO - As if I couldn’t see through him!
+[2025-07-20T15:19:50.415+0000] {logging_mixin.py:188} INFO - Still, I don’t wonder he acts so, sleeping under this paper for three
+[2025-07-20T15:19:50.415+0000] {logging_mixin.py:188} INFO - months.
+[2025-07-20T15:19:50.416+0000] {logging_mixin.py:188} INFO - It only interests me, but I feel sure John and Jennie are secretly
+[2025-07-20T15:19:50.417+0000] {logging_mixin.py:188} INFO - affected by it.
+[2025-07-20T15:19:50.417+0000] {logging_mixin.py:188} INFO - Hurrah! This is the last day, but it is enough. John is to stay in town
+[2025-07-20T15:19:50.418+0000] {logging_mixin.py:188} INFO - over night, and won’t be out until this evening.
+[2025-07-20T15:19:50.418+0000] {logging_mixin.py:188} INFO - Jennie wanted to sleep with me—the sly thing! but I told her I should
+[2025-07-20T15:19:50.418+0000] {logging_mixin.py:188} INFO - undoubtedly rest better for a night all alone.
+[2025-07-20T15:19:50.418+0000] {logging_mixin.py:188} INFO - That was clever, for really I wasn’t alone a bit! As soon as it was
+[2025-07-20T15:19:50.419+0000] {logging_mixin.py:188} INFO - moonlight, and that poor thing began to crawl and shake the pattern, I
+[2025-07-20T15:19:50.419+0000] {logging_mixin.py:188} INFO - got up and ran to help her.
+[2025-07-20T15:19:50.419+0000] {logging_mixin.py:188} INFO - I pulled and she shook, I shook and she pulled, and before morning we
+[2025-07-20T15:19:50.420+0000] {logging_mixin.py:188} INFO - had peeled off yards of that paper.
+[2025-07-20T15:19:50.420+0000] {logging_mixin.py:188} INFO - A strip about as high as my head and half around the room.
+[2025-07-20T15:19:50.420+0000] {logging_mixin.py:188} INFO - And then when the sun came and that awful pattern began to laugh at me
+[2025-07-20T15:19:50.420+0000] {logging_mixin.py:188} INFO - I declared I would finish it to-day!
+[2025-07-20T15:19:50.421+0000] {logging_mixin.py:188} INFO - We go away to-morrow, and they are moving all my furniture down again
+[2025-07-20T15:19:50.421+0000] {logging_mixin.py:188} INFO - to leave things as they were before.
+[2025-07-20T15:19:50.421+0000] {logging_mixin.py:188} INFO - Jennie looked at the wall in amazement, but I told her merrily that I
+[2025-07-20T15:19:50.422+0000] {logging_mixin.py:188} INFO - did it out of pure spite at the vicious thing.
+[2025-07-20T15:19:50.422+0000] {logging_mixin.py:188} INFO - She laughed and said she wouldn’t mind doing it herself, but I must not
+[2025-07-20T15:19:50.422+0000] {logging_mixin.py:188} INFO - get tired.
+[2025-07-20T15:19:50.422+0000] {logging_mixin.py:188} INFO - How she betrayed herself that time!
+[2025-07-20T15:19:50.423+0000] {logging_mixin.py:188} INFO - But I am here, and no person touches this paper but me—not alive!
+[2025-07-20T15:19:50.423+0000] {logging_mixin.py:188} INFO - She tried to get me out of the room—it was too patent! But I said it
+[2025-07-20T15:19:50.423+0000] {logging_mixin.py:188} INFO - was so quiet and empty and clean now that I believed I would lie down
+[2025-07-20T15:19:50.424+0000] {logging_mixin.py:188} INFO - again and sleep all I could; and not to wake me even for dinner—I would
+[2025-07-20T15:19:50.424+0000] {logging_mixin.py:188} INFO - call when I woke.
+[2025-07-20T15:19:50.424+0000] {logging_mixin.py:188} INFO - So now she is gone, and the servants are gone, and the things are gone,
+[2025-07-20T15:19:50.424+0000] {logging_mixin.py:188} INFO - and there is nothing left but that great bedstead nailed down, with the
+[2025-07-20T15:19:50.425+0000] {logging_mixin.py:188} INFO - canvas mattress we found on it.
+[2025-07-20T15:19:50.425+0000] {logging_mixin.py:188} INFO - We shall sleep downstairs to-night, and take the boat home to-morrow.
+[2025-07-20T15:19:50.426+0000] {logging_mixin.py:188} INFO - I quite enjoy the room, now it is bare again.
+[2025-07-20T15:19:50.426+0000] {logging_mixin.py:188} INFO - How those children did tear about here!
+[2025-07-20T15:19:50.426+0000] {logging_mixin.py:188} INFO - This bedstead is fairly gnawed!
+[2025-07-20T15:19:50.426+0000] {logging_mixin.py:188} INFO - But I must get to work.
+[2025-07-20T15:19:50.427+0000] {logging_mixin.py:188} INFO - I have locked the door and thrown the key down into the front path.
+[2025-07-20T15:19:50.427+0000] {logging_mixin.py:188} INFO - I don’t want to go out, and I don’t want to have anybody come in, till
+[2025-07-20T15:19:50.427+0000] {logging_mixin.py:188} INFO - John comes.
+[2025-07-20T15:19:50.428+0000] {logging_mixin.py:188} INFO - I want to astonish him.
+[2025-07-20T15:19:50.428+0000] {logging_mixin.py:188} INFO - I’ve got a rope up here that even Jennie did not find. If that woman
+[2025-07-20T15:19:50.428+0000] {logging_mixin.py:188} INFO - does get out, and tries to get away, I can tie her!
+[2025-07-20T15:19:50.428+0000] {logging_mixin.py:188} INFO - But I forgot I could not reach far without anything to stand on!
+[2025-07-20T15:19:50.429+0000] {logging_mixin.py:188} INFO - This bed will not move!
+[2025-07-20T15:19:50.429+0000] {logging_mixin.py:188} INFO - I tried to lift and push it until I was lame, and then I got so angry I
+[2025-07-20T15:19:50.430+0000] {logging_mixin.py:188} INFO - bit off a little piece at one corner—but it hurt my teeth.
+[2025-07-20T15:19:50.430+0000] {logging_mixin.py:188} INFO - Then I peeled off all the paper I could reach standing on the floor. It
+[2025-07-20T15:19:50.430+0000] {logging_mixin.py:188} INFO - sticks horribly and the pattern just enjoys it! All those strangled
+[2025-07-20T15:19:50.431+0000] {logging_mixin.py:188} INFO - heads and bulbous eyes and waddling fungus growths just shriek with
+[2025-07-20T15:19:50.431+0000] {logging_mixin.py:188} INFO - derision!
+[2025-07-20T15:19:50.431+0000] {logging_mixin.py:188} INFO - I am getting angry enough to do something desperate. To jump out of the
+[2025-07-20T15:19:50.432+0000] {logging_mixin.py:188} INFO - window would be admirable exercise, but the bars are too strong even to
+[2025-07-20T15:19:50.432+0000] {logging_mixin.py:188} INFO - try.
+[2025-07-20T15:19:50.432+0000] {logging_mixin.py:188} INFO - Besides I wouldn’t do it. Of course not. I know well enough that a step
+[2025-07-20T15:19:50.433+0000] {logging_mixin.py:188} INFO - like that is improper and might be misconstrued.
+[2025-07-20T15:19:50.433+0000] {logging_mixin.py:188} INFO - I don’t like to look out of the windows even—there are so many of those
+[2025-07-20T15:19:50.433+0000] {logging_mixin.py:188} INFO - creeping women, and they creep so fast.
+[2025-07-20T15:19:50.434+0000] {logging_mixin.py:188} INFO - I wonder if they all come out of that wallpaper as I did?
+[2025-07-20T15:19:50.434+0000] {logging_mixin.py:188} INFO - But I am securely fastened now by my well-hidden rope—you don’t get me
+[2025-07-20T15:19:50.434+0000] {logging_mixin.py:188} INFO - out in the road there!
+[2025-07-20T15:19:50.434+0000] {logging_mixin.py:188} INFO - I suppose I shall have to get back behind the pattern when it comes
+[2025-07-20T15:19:50.435+0000] {logging_mixin.py:188} INFO - night, and that is hard!
+[2025-07-20T15:19:50.435+0000] {logging_mixin.py:188} INFO - It is so pleasant to be out in this great room and creep around as I
+[2025-07-20T15:19:50.435+0000] {logging_mixin.py:188} INFO - please!
+[2025-07-20T15:19:50.435+0000] {logging_mixin.py:188} INFO - I don’t want to go outside. I won’t, even if Jennie asks me to.
+[2025-07-20T15:19:50.436+0000] {logging_mixin.py:188} INFO - For outside you have to creep on the ground, and everything is green
+[2025-07-20T15:19:50.436+0000] {logging_mixin.py:188} INFO - instead of yellow.
+[2025-07-20T15:19:50.436+0000] {logging_mixin.py:188} INFO - But here I can creep smoothly on the floor, and my shoulder just fits
+[2025-07-20T15:19:50.437+0000] {logging_mixin.py:188} INFO - in that long smooch around the wall, so I cannot lose my way.
+[2025-07-20T15:19:50.437+0000] {logging_mixin.py:188} INFO - Why, there’s John at the door!
+[2025-07-20T15:19:50.437+0000] {logging_mixin.py:188} INFO - It is no use, young man, you can’t open it!
+[2025-07-20T15:19:50.437+0000] {logging_mixin.py:188} INFO - How he does call and pound!
+[2025-07-20T15:19:50.438+0000] {logging_mixin.py:188} INFO - Now he’s crying for an axe.
+[2025-07-20T15:19:50.438+0000] {logging_mixin.py:188} INFO - It would be a shame to break down that beautiful door!
+[2025-07-20T15:19:50.438+0000] {logging_mixin.py:188} INFO - “John dear!” said I in the gentlest voice, “the key is down by the
+[2025-07-20T15:19:50.439+0000] {logging_mixin.py:188} INFO - front steps, under a plantain leaf!”
+[2025-07-20T15:19:50.439+0000] {logging_mixin.py:188} INFO - That silenced him for a few moments.
+[2025-07-20T15:19:50.439+0000] {logging_mixin.py:188} INFO - Then he said—very quietly indeed, “Open the door, my darling!”
+[2025-07-20T15:19:50.439+0000] {logging_mixin.py:188} INFO - “I can’t,” said I. “The key is down by the front door under a plantain
+[2025-07-20T15:19:50.440+0000] {logging_mixin.py:188} INFO - leaf!”
+[2025-07-20T15:19:50.440+0000] {logging_mixin.py:188} INFO - And then I said it again, several times, very gently and slowly, and
+[2025-07-20T15:19:50.440+0000] {logging_mixin.py:188} INFO - said it so often that he had to go and see, and he got it, of course,
+[2025-07-20T15:19:50.441+0000] {logging_mixin.py:188} INFO - and came in. He stopped short by the door.
+[2025-07-20T15:19:50.441+0000] {logging_mixin.py:188} INFO - “What is the matter?” he cried. “For God’s sake, what are you doing!”
+[2025-07-20T15:19:50.441+0000] {logging_mixin.py:188} INFO - I kept on creeping just the same, but I looked at him over my shoulder.
+[2025-07-20T15:19:50.442+0000] {logging_mixin.py:188} INFO - “I’ve got out at last,” said I, “in spite of you and Jane! And I’ve
+[2025-07-20T15:19:50.442+0000] {logging_mixin.py:188} INFO - pulled off most of the paper, so you can’t put me back!”
+[2025-07-20T15:19:50.442+0000] {logging_mixin.py:188} INFO - Now why should that man have fainted? But he did, and right across my
+[2025-07-20T15:19:50.443+0000] {logging_mixin.py:188} INFO - path by the wall, so that I had to creep over him every time!
+[2025-07-20T15:19:50.443+0000] {logging_mixin.py:188} INFO - *** END OF THE PROJECT GUTENBERG EBOOK 1952 ***
+[2025-07-20T15:19:50.443+0000] {logging_mixin.py:188} INFO - The Yellow Wallpaper By Charlotte Perkins Gilman It is very seldom that mere ordinary people like John and myself secure ancestral halls for the summer. A colonial mansion, a hereditary estate, I would say a haunted house, and reach the height of romantic felicity—but that would be asking too much of fate! Still I will proudly declare that there is something queer about it. Else, why should it be let so cheaply? And why have stood so long untenanted? John laughs at me, of course, but one expects that in marriage. John is practical in the extreme. He has no patience with faith, an intense horror of superstition, and he scoffs openly at any talk of things not to be felt and seen and put down in figures. John is a physician, and perhaps—(I would not say it to a living soul, of course, but this is dead paper and a great relief to my mind)—perhaps that is one reason I do not get well faster. You see, he does not believe I am sick! And what can one do? If a physician of high standing, and one’s own husband, assures friends and relatives that there is really nothing the matter with one but temporary nervous depression—a slight hysterical tendency—what is one to do? My brother is also a physician, and also of high standing, and he says the same thing. So I take phosphates or phosphites—whichever it is, and tonics, and journeys, and air, and exercise, and am absolutely forbidden to “work” until I am well again. Personally, I disagree with their ideas. Personally, I believe that congenial work, with excitement and change, would do me good. But what is one to do? I did write for a while in spite of them; but it does exhaust me a good deal—having to be so sly about it, or else meet with heavy opposition. I sometimes fancy that in my condition if I had less opposition and more society and stimulus—but John says the very worst thing I can do is to think about my condition, and I confess it always makes me feel bad. So I will let it alone and talk about the house. The most beautiful place! It is quite alone, standing well back from the road, quite three miles from the village. It makes me think of English places that you read about, for there are hedges and walls and gates that lock, and lots of separate little houses for the gardeners and people. There is a delicious garden! I never saw such a garden—large and shady, full of box-bordered paths, and lined with long grape-covered arbors with seats under them. There were greenhouses, too, but they are all broken now. There was some legal trouble, I believe, something about the heirs and co-heirs; anyhow, the place has been empty for years. That spoils my ghostliness, I am afraid; but I don’t care—there is something strange about the house—I can feel it. I even said so to John one moonlight evening, but he said what I felt was a draught, and shut the window. I get unreasonably angry with John sometimes. I’m sure I never used to be so sensitive. I think it is due to this nervous condition. But John says if I feel so I shall neglect proper self-control; so I take pains to control myself,—before him, at least,—and that makes me very tired. I don’t like our room a bit. I wanted one downstairs that opened on the piazza and had roses all over the window, and such pretty old-fashioned chintz hangings! but John would not hear of it. He said there was only one window and not room for two beds, and no near room for him if he took another. He is very careful and loving, and hardly lets me stir without special direction. I have a schedule prescription for each hour in the day; he takes all care from me, and so I feel basely ungrateful not to value it more. He said we came here solely on my account, that I was to have perfect rest and all the air I could get. “Your exercise depends on your strength, my dear,” said he, “and your food somewhat on your appetite; but air you can absorb all the time.” So we took the nursery, at the top of the house. It is a big, airy room, the whole floor nearly, with windows that look all ways, and air and sunshine galore. It was nursery first and then playground and gymnasium, I should judge; for the windows are barred for little children, and there are rings and things in the walls. The paint and paper look as if a boys’ school had used it. It is stripped off—the paper—in great patches all around the head of my bed, about as far as I can reach, and in a great place on the other side of the room low down. I never saw a worse paper in my life. One of those sprawling flamboyant patterns committing every artistic sin. It is dull enough to confuse the eye in following, pronounced enough to constantly irritate, and provoke study, and when you follow the lame, uncertain curves for a little distance they suddenly commit suicide—plunge off at outrageous angles, destroy themselves in unheard-of contradictions. The color is repellant, almost revolting; a smouldering, unclean yellow, strangely faded by the slow-turning sunlight. It is a dull yet lurid orange in some places, a sickly sulphur tint in others. No wonder the children hated it! I should hate it myself if I had to live in this room long. There comes John, and I must put this away,—he hates to have me write a word. We have been here two weeks, and I haven’t felt like writing before, since that first day. I am sitting by the window now, up in this atrocious nursery, and there is nothing to hinder my writing as much as I please, save lack of strength. John is away all day, and even some nights when his cases are serious. I am glad my case is not serious! But these nervous troubles are dreadfully depressing. John does not know how much I really suffer. He knows there is no reason to suffer, and that satisfies him. Of course it is only nervousness. It does weigh on me so not to do my duty in any way! I meant to be such a help to John, such a real rest and comfort, and here I am a comparative burden already! Nobody would believe what an effort it is to do what little I am able—to dress and entertain, and order things. It is fortunate Mary is so good with the baby. Such a dear baby! And yet I cannot be with him, it makes me so nervous. I suppose John never was nervous in his life. He laughs at me so about this wallpaper! At first he meant to repaper the room, but afterwards he said that I was letting it get the better of me, and that nothing was worse for a nervous patient than to give way to such fancies. He said that after the wallpaper was changed it would be the heavy bedstead, and then the barred windows, and then that gate at the head of the stairs, and so on. “You know the place is doing you good,” he said, “and really, dear, I don’t care to renovate the house just for a three months’ rental.” “Then do let us go downstairs,” I said, “there are such pretty rooms there.” Then he took me in his arms and called me a blessed little goose, and said he would go down cellar if I wished, and have it whitewashed into the bargain. But he is right enough about the beds and windows and things. It is as airy and comfortable a room as any one need wish, and, of course, I would not be so silly as to make him uncomfortable just for a whim. I’m really getting quite fond of the big room, all but that horrid paper. Out of one window I can see the garden, those mysterious deep-shaded arbors, the riotous old-fashioned flowers, and bushes and gnarly trees. Out of another I get a lovely view of the bay and a little private wharf belonging to the estate. There is a beautiful shaded lane that runs down there from the house. I always fancy I see people walking in these numerous paths and arbors, but John has cautioned me not to give way to fancy in the least. He says that with my imaginative power and habit of story-making a nervous weakness like mine is sure to lead to all manner of excited fancies, and that I ought to use my will and good sense to check the tendency. So I try. I think sometimes that if I were only well enough to write a little it would relieve the press of ideas and rest me. But I find I get pretty tired when I try. It is so discouraging not to have any advice and companionship about my work. When I get really well John says we will ask Cousin Henry and Julia down for a long visit; but he says he would as soon put fire-works in my pillow-case as to let me have those stimulating people about now. I wish I could get well faster. But I must not think about that. This paper looks to me as if it knew what a vicious influence it had! There is a recurrent spot where the pattern lolls like a broken neck and two bulbous eyes stare at you upside-down. I get positively angry with the impertinence of it and the everlastingness. Up and down and sideways they crawl, and those absurd, unblinking eyes are everywhere. There is one place where two breadths didn’t match, and the eyes go all up and down the line, one a little higher than the other. I never saw so much expression in an inanimate thing before, and we all know how much expression they have! I used to lie awake as a child and get more entertainment and terror out of blank walls and plain furniture than most children could find in a toy-store. I remember what a kindly wink the knobs of our big old bureau used to have, and there was one chair that always seemed like a strong friend. I used to feel that if any of the other things looked too fierce I could always hop into that chair and be safe. The furniture in this room is no worse than inharmonious, however, for we had to bring it all from downstairs. I suppose when this was used as a playroom they had to take the nursery things out, and no wonder! I never saw such ravages as the children have made here. The wallpaper, as I said before, is torn off in spots, and it sticketh closer than a brother—they must have had perseverance as well as hatred. Then the floor is scratched and gouged and splintered, the plaster itself is dug out here and there, and this great heavy bed, which is all we found in the room, looks as if it had been through the wars. But I don’t mind it a bit—only the paper. There comes John’s sister. Such a dear girl as she is, and so careful of me! I must not let her find me writing. She is a perfect, and enthusiastic housekeeper, and hopes for no better profession. I verily believe she thinks it is the writing which made me sick! But I can write when she is out, and see her a long way off from these windows. There is one that commands the road, a lovely, shaded, winding road, and one that just looks off over the country. A lovely country, too, full of great elms and velvet meadows. This wallpaper has a kind of sub-pattern in a different shade, a particularly irritating one, for you can only see it in certain lights, and not clearly then. But in the places where it isn’t faded, and where the sun is just so, I can see a strange, provoking, formless sort of figure, that seems to sulk about behind that silly and conspicuous front design. There’s sister on the stairs! Well, the Fourth of July is over! The people are gone and I am tired out. John thought it might do me good to see a little company, so we just had mother and Nellie and the children down for a week. Of course I didn’t do a thing. Jennie sees to everything now. But it tired me all the same. John says if I don’t pick up faster he shall send me to Weir Mitchell in the fall. But I don’t want to go there at all. I had a friend who was in his hands once, and she says he is just like John and my brother, only more so! Besides, it is such an undertaking to go so far. I don’t feel as if it was worth while to turn my hand over for anything, and I’m getting dreadfully fretful and querulous. I cry at nothing, and cry most of the time. Of course I don’t when John is here, or anybody else, but when I am alone. And I am alone a good deal just now. John is kept in town very often by serious cases, and Jennie is good and lets me alone when I want her to. So I walk a little in the garden or down that lovely lane, sit on the porch under the roses, and lie down up here a good deal. I’m getting really fond of the room in spite of the wallpaper. Perhaps because of the wallpaper. It dwells in my mind so! I lie here on this great immovable bed—it is nailed down, I believe—and follow that pattern about by the hour. It is as good as gymnastics, I assure you. I start, we’ll say, at the bottom, down in the corner over there where it has not been touched, and I determine for the thousandth time that I will follow that pointless pattern to some sort of a conclusion. I know a little of the principle of design, and I know this thing was not arranged on any laws of radiation, or alternation, or repetition, or symmetry, or anything else that I ever heard of. It is repeated, of course, by the breadths, but not otherwise. Looked at in one way each breadth stands alone, the bloated curves and flourishes—a kind of “debased Romanesque” with delirium tremens—go waddling up and down in isolated columns of fatuity. But, on the other hand, they connect diagonally, and the sprawling outlines run off in great slanting waves of optic horror, like a lot of wallowing seaweeds in full chase. The whole thing goes horizontally, too, at least it seems so, and I exhaust myself in trying to distinguish the order of its going in that direction. They have used a horizontal breadth for a frieze, and that adds wonderfully to the confusion. There is one end of the room where it is almost intact, and there, when the cross-lights fade and the low sun shines directly upon it, I can almost fancy radiation after all,—the interminable grotesques seem to form around a common centre and rush off in headlong plunges of equal distraction. It makes me tired to follow it. I will take a nap, I guess. I don’t know why I should write this. I don’t want to. I don’t feel able. And I know John would think it absurd. But I must say what I feel and think in some way—it is such a relief! But the effort is getting to be greater than the relief. Half the time now I am awfully lazy, and lie down ever so much. John says I mustn’t lose my strength, and has me take cod-liver oil and lots of tonics and things, to say nothing of ale and wine and rare meat. Dear John! He loves me very dearly, and hates to have me sick. I tried to have a real earnest reasonable talk with him the other day, and tell him how I wish he would let me go and make a visit to Cousin Henry and Julia. But he said I wasn’t able to go, nor able to stand it after I got there; and I did not make out a very good case for myself, for I was crying before I had finished. It is getting to be a great effort for me to think straight. Just this nervous weakness, I suppose. And dear John gathered me up in his arms, and just carried me upstairs and laid me on the bed, and sat by me and read to me till it tired my head. He said I was his darling and his comfort and all he had, and that I must take care of myself for his sake, and keep well. He says no one but myself can help me out of it, that I must use my will and self-control and not let any silly fancies run away with me. There’s one comfort, the baby is well and happy, and does not have to occupy this nursery with the horrid wallpaper. If we had not used it that blessed child would have! What a fortunate escape! Why, I wouldn’t have a child of mine, an impressionable little thing, live in such a room for worlds. I never thought of it before, but it is lucky that John kept me here after all. I can stand it so much easier than a baby, you see. Of course I never mention it to them any more,—I am too wise,—but I keep watch of it all the same. There are things in that paper that nobody knows but me, or ever will. Behind that outside pattern the dim shapes get clearer every day. It is always the same shape, only very numerous. And it is like a woman stooping down and creeping about behind that pattern. I don’t like it a bit. I wonder—I begin to think—I wish John would take me away from here! It is so hard to talk with John about my case, because he is so wise, and because he loves me so. But I tried it last night. It was moonlight. The moon shines in all around, just as the sun does. I hate to see it sometimes, it creeps so slowly, and always comes in by one window or another. John was asleep and I hated to waken him, so I kept still and watched the moonlight on that undulating wallpaper till I felt creepy. The faint figure behind seemed to shake the pattern, just as if she wanted to get out. I got up softly and went to feel and see if the paper did move, and when I came back John was awake. “What is it, little girl?” he said. “Don’t go walking about like that—you’ll get cold.” I thought it was a good time to talk, so I told him that I really was not gaining here, and that I wished he would take me away. “Why darling!” said he, “our lease will be up in three weeks, and I can’t see how to leave before. “The repairs are not done at home, and I cannot possibly leave town just now. Of course if you were in any danger I could and would, but you really are better, dear, whether you can see it or not. I am a doctor, dear, and I know. You are gaining flesh and color, your appetite is better. I feel really much easier about you.” “I don’t weigh a bit more,” said I, “nor as much; and my appetite may be better in the evening, when you are here, but it is worse in the morning when you are away.” “Bless her little heart!” said he with a big hug; “she shall be as sick as she pleases! But now let’s improve the shining hours by going to sleep, and talk about it in the morning!” “And you won’t go away?” I asked gloomily. “Why, how can I, dear? It is only three weeks more and then we will take a nice little trip of a few days while Jennie is getting the house ready. Really, dear, you are better!” “Better in body perhaps”—I began, and stopped short, for he sat up straight and looked at me with such a stern, reproachful look that I could not say another word. “My darling,” said he, “I beg of you, for my sake and for our child’s sake, as well as for your own, that you will never for one instant let that idea enter your mind! There is nothing so dangerous, so fascinating, to a temperament like yours. It is a false and foolish fancy. Can you not trust me as a physician when I tell you so?” So of course I said no more on that score, and we went to sleep before long. He thought I was asleep first, but I wasn’t,—I lay there for hours trying to decide whether that front pattern and the back pattern really did move together or separately. On a pattern like this, by daylight, there is a lack of sequence, a defiance of law, that is a constant irritant to a normal mind. The color is hideous enough, and unreliable enough, and infuriating enough, but the pattern is torturing. You think you have mastered it, but just as you get well under way in following, it turns a back somersault and there you are. It slaps you in the face, knocks you down, and tramples upon you. It is like a bad dream. The outside pattern is a florid arabesque, reminding one of a fungus. If you can imagine a toadstool in joints, an interminable string of toadstools, budding and sprouting in endless convolutions,—why, that is something like it. That is, sometimes! There is one marked peculiarity about this paper, a thing nobody seems to notice but myself, and that is that it changes as the light changes. When the sun shoots in through the east window—I always watch for that first long, straight ray—it changes so quickly that I never can quite believe it. That is why I watch it always. By moonlight—the moon shines in all night when there is a moon—I wouldn’t know it was the same paper. At night in any kind of light, in twilight, candlelight, lamplight, and worst of all by moonlight, it becomes bars! The outside pattern I mean, and the woman behind it is as plain as can be. I didn’t realize for a long time what the thing was that showed behind,—that dim sub-pattern,—but now I am quite sure it is a woman. By daylight she is subdued, quiet. I fancy it is the pattern that keeps her so still. It is so puzzling. It keeps me quiet by the hour. I lie down ever so much now. John says it is good for me, and to sleep all I can. Indeed, he started the habit by making me lie down for an hour after each meal. It is a very bad habit, I am convinced, for, you see, I don’t sleep. And that cultivates deceit, for I don’t tell them I’m awake,—oh, no! The fact is, I am getting a little afraid of John. He seems very queer sometimes, and even Jennie has an inexplicable look. It strikes me occasionally, just as a scientific hypothesis, that perhaps it is the paper! I have watched John when he did not know I was looking, and come into the room suddenly on the most innocent excuses, and I’ve caught him several times looking at the paper! And Jennie too. I caught Jennie with her hand on it once. She didn’t know I was in the room, and when I asked her in a quiet, a very quiet voice, with the most restrained manner possible, what she was doing with the paper she turned around as if she had been caught stealing, and looked quite angry—asked me why I should frighten her so! Then she said that the paper stained everything it touched, that she had found yellow smooches on all my clothes and John’s, and she wished we would be more careful! Did not that sound innocent? But I know she was studying that pattern, and I am determined that nobody shall find it out but myself! Life is very much more exciting now than it used to be. You see I have something more to expect, to look forward to, to watch. I really do eat better, and am more quiet than I was. John is so pleased to see me improve! He laughed a little the other day, and said I seemed to be flourishing in spite of my wallpaper. I turned it off with a laugh. I had no intention of telling him it was because of the wallpaper—he would make fun of me. He might even want to take me away. I don’t want to leave now until I have found it out. There is a week more, and I think that will be enough. I’m feeling ever so much better! I don’t sleep much at night, for it is so interesting to watch developments; but I sleep a good deal in the daytime. In the daytime it is tiresome and perplexing. There are always new shoots on the fungus, and new shades of yellow all over it. I cannot keep count of them, though I have tried conscientiously. It is the strangest yellow, that wallpaper! It makes me think of all the yellow things I ever saw—not beautiful ones like buttercups, but old foul, bad yellow things. But there is something else about that paper—the smell! I noticed it the moment we came into the room, but with so much air and sun it was not bad. Now we have had a week of fog and rain, and whether the windows are open or not, the smell is here. It creeps all over the house. I find it hovering in the dining-room, skulking in the parlor, hiding in the hall, lying in wait for me on the stairs. It gets into my hair. Even when I go to ride, if I turn my head suddenly and surprise it—there is that smell! Such a peculiar odor, too! I have spent hours in trying to analyze it, to find what it smelled like. It is not bad—at first, and very gentle, but quite the subtlest, most enduring odor I ever met. In this damp weather it is awful. I wake up in the night and find it hanging over me. It used to disturb me at first. I thought seriously of burning the house—to reach the smell. But now I am used to it. The only thing I can think of that it is like is the color of the paper! A yellow smell. There is a very funny mark on this wall, low down, near the mopboard. A streak that runs round the room. It goes behind every piece of furniture, except the bed, a long, straight, even smooch, as if it had been rubbed over and over. I wonder how it was done and who did it, and what they did it for. Round and round and round—round and round and round—it makes me dizzy! I really have discovered something at last. Through watching so much at night, when it changes so, I have finally found out. The front pattern does move—and no wonder! The woman behind shakes it! Sometimes I think there are a great many women behind, and sometimes only one, and she crawls around fast, and her crawling shakes it all over. Then in the very bright spots she keeps still, and in the very shady spots she just takes hold of the bars and shakes them hard. And she is all the time trying to climb through. But nobody could climb through that pattern—it strangles so; I think that is why it has so many heads. They get through, and then the pattern strangles them off and turns them upside-down, and makes their eyes white! If those heads were covered or taken off it would not be half so bad. I think that woman gets out in the daytime! And I’ll tell you why—privately—I’ve seen her! I can see her out of every one of my windows! It is the same woman, I know, for she is always creeping, and most women do not creep by daylight. I see her on that long shaded lane, creeping up and down. I see her in those dark grape arbors, creeping all around the garden. I see her on that long road under the trees, creeping along, and when a carriage comes she hides under the blackberry vines. I don’t blame her a bit. It must be very humiliating to be caught creeping by daylight! I always lock the door when I creep by daylight. I can’t do it at night, for I know John would suspect something at once. And John is so queer now, that I don’t want to irritate him. I wish he would take another room! Besides, I don’t want anybody to get that woman out at night but myself. I often wonder if I could see her out of all the windows at once. But, turn as fast as I can, I can only see out of one at one time. And though I always see her she may be able to creep faster than I can turn! I have watched her sometimes away off in the open country, creeping as fast as a cloud shadow in a high wind. If only that top pattern could be gotten off from the under one! I mean to try it, little by little. I have found out another funny thing, but I shan’t tell it this time! It does not do to trust people too much. There are only two more days to get this paper off, and I believe John is beginning to notice. I don’t like the look in his eyes. And I heard him ask Jennie a lot of professional questions about me. She had a very good report to give. She said I slept a good deal in the daytime. John knows I don’t sleep very well at night, for all I’m so quiet! He asked me all sorts of questions, too, and pretended to be very loving and kind. As if I couldn’t see through him! Still, I don’t wonder he acts so, sleeping under this paper for three months. It only interests me, but I feel sure John and Jennie are secretly affected by it. Hurrah! This is the last day, but it is enough. John is to stay in town over night, and won’t be out until this evening. Jennie wanted to sleep with me—the sly thing! but I told her I should undoubtedly rest better for a night all alone. That was clever, for really I wasn’t alone a bit! As soon as it was moonlight, and that poor thing began to crawl and shake the pattern, I got up and ran to help her. I pulled and she shook, I shook and she pulled, and before morning we had peeled off yards of that paper. A strip about as high as my head and half around the room. And then when the sun came and that awful pattern began to laugh at me I declared I would finish it to-day! We go away to-morrow, and they are moving all my furniture down again to leave things as they were before. Jennie looked at the wall in amazement, but I told her merrily that I did it out of pure spite at the vicious thing. She laughed and said she wouldn’t mind doing it herself, but I must not get tired. How she betrayed herself that time! But I am here, and no person touches this paper but me—not alive! She tried to get me out of the room—it was too patent! But I said it was so quiet and empty and clean now that I believed I would lie down again and sleep all I could; and not to wake me even for dinner—I would call when I woke. So now she is gone, and the servants are gone, and the things are gone, and there is nothing left but that great bedstead nailed down, with the canvas mattress we found on it. We shall sleep downstairs to-night, and take the boat home to-morrow. I quite enjoy the room, now it is bare again. How those children did tear about here! This bedstead is fairly gnawed! But I must get to work. I have locked the door and thrown the key down into the front path. I don’t want to go out, and I don’t want to have anybody come in, till John comes. I want to astonish him. I’ve got a rope up here that even Jennie did not find. If that woman does get out, and tries to get away, I can tie her! But I forgot I could not reach far without anything to stand on! This bed will not move! I tried to lift and push it until I was lame, and then I got so angry I bit off a little piece at one corner—but it hurt my teeth. Then I peeled off all the paper I could reach standing on the floor. It sticks horribly and the pattern just enjoys it! All those strangled heads and bulbous eyes and waddling fungus growths just shriek with derision! I am getting angry enough to do something desperate. To jump out of the window would be admirable exercise, but the bars are too strong even to try. Besides I wouldn’t do it. Of course not. I know well enough that a step like that is improper and might be misconstrued. I don’t like to look out of the windows even—there are so many of those creeping women, and they creep so fast. I wonder if they all come out of that wallpaper as I did? But I am securely fastened now by my well-hidden rope—you don’t get me out in the road there! I suppose I shall have to get back behind the pattern when it comes night, and that is hard! It is so pleasant to be out in this great room and creep around as I please! I don’t want to go outside. I won’t, even if Jennie asks me to. For outside you have to creep on the ground, and everything is green instead of yellow. But here I can creep smoothly on the floor, and my shoulder just fits in that long smooch around the wall, so I cannot lose my way. Why, there’s John at the door! It is no use, young man, you can’t open it! How he does call and pound! Now he’s crying for an axe. It would be a shame to break down that beautiful door! “John dear!” said I in the gentlest voice, “the key is down by the front steps, under a plantain leaf!” That silenced him for a few moments. Then he said—very quietly indeed, “Open the door, my darling!” “I can’t,” said I. “The key is down by the front door under a plantain leaf!” And then I said it again, several times, very gently and slowly, and said it so often that he had to go and see, and he got it, of course, and came in. He stopped short by the door. “What is the matter?” he cried. “For God’s sake, what are you doing!” I kept on creeping just the same, but I looked at him over my shoulder. “I’ve got out at last,” said I, “in spite of you and Jane! And I’ve pulled off most of the paper, so you can’t put me back!” Now why should that man have fainted? But he did, and right across my path by the wall, so that I had to creep over him every time!
+[2025-07-20T15:19:50.466+0000] {logging_mixin.py:188} INFO - Uploaded DataFrame as parquet data.parquet to MinIO bucket silver
+[2025-07-20T15:19:50.467+0000] {python.py:201} INFO - Done. Returned value was: None
+[2025-07-20T15:19:50.474+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=ETL_Pipeline, task_id=silver_transform, execution_date=20250720T151929, start_date=20250720T151950, end_date=20250720T151950
+[2025-07-20T15:19:50.541+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2025-07-20T15:19:50.560+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
