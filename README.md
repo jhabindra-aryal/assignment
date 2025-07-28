@@ -5,3 +5,7 @@ This project is about the creating the rag application using the tools like:
 - Docker - setting environments
 - FastAPI - for web server
 - Chromadb - vector database
+
+
+
+Recording is available at: https://drive.google.com/file/d/1iSwnmlYXUj-RuMa4k0sVsCVHpgv_gcir/view?usp=drive_link
